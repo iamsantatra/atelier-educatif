@@ -3,12 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const db = require("./configs/db.config")
 const utilisateurRoutes = require("./routes/utilisateur.routes");
-const restaurantRoutes = require("./routes/restaurant.routes");
-const platRoutes = require("./routes/plat.routes");
-const commandeRoutes = require("./routes/commande.routes");
 const recitationRoutes = require("./routes/recitation.routes");
-// const uploadRoutes = require("./routes/upload.routes");
-// const Commandes = require("./models/commande.model")
 path = require('path')
 
 
@@ -39,8 +34,5 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/utilisateur", utilisateurRoutes);
-app.use("/api/restaurant", restaurantRoutes);
-app.use("/api/plat", platRoutes);
-app.use("/api/commande", commandeRoutes);
 app.use("/api/recitation", recitationRoutes);
 module.exports = app;

@@ -2,7 +2,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const Utilisateur = require("../models/utilisateur.model")
-const nodemailer = require("../configs/nodemailer.config");
+// const nodemailer = require("../configs/nodemailer.config");
 const ObjectID = require('mongodb').ObjectID
 
 // exports.inscription = async (req, res, next) => {
