@@ -1,13 +1,9 @@
-package com.example.ateliereducatif.retrofit;
+package com.example.ateliereducatif.service;
 
-import com.example.ateliereducatif.model.EntiteRep;
-
-import java.util.HashMap;
+import com.example.ateliereducatif.model.reponse.EntiteRep;
 
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
 
 public interface EntiteService {
   static String BASE_URL = "entite/";

@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const db = require("./configs/db.config")
 const utilisateurRoutes = require("./routes/utilisateur.routes");
 const recitationRoutes = require("./routes/recitation.routes");
+const terreRoutes = require("./routes/terre.routes");
 path = require('path')
 
 
@@ -35,4 +36,5 @@ app.use((req, res, next) => {
 
 app.use("/api/utilisateur", utilisateurRoutes);
 app.use("/api/recitation", recitationRoutes);
+app.use("/api/terre", terreRoutes);
 module.exports = app;

@@ -1,13 +1,12 @@
-package com.example.ateliereducatif;
+package com.example.ateliereducatif.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
+
+import com.example.ateliereducatif.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +24,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 2500);
+        }, 3000);
     }
 }

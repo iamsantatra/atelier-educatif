@@ -1,4 +1,6 @@
-package com.example.ateliereducatif.model;
+package com.example.ateliereducatif.model.reponse;
+
+import com.example.ateliereducatif.model.Entite;
 
 import java.util.List;
 

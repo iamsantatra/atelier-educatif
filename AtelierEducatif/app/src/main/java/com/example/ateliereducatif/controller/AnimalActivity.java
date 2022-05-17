@@ -1,4 +1,4 @@
-package com.example.ateliereducatif;
+package com.example.ateliereducatif.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 

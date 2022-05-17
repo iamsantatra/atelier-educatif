@@ -1,5 +1,4 @@
 const mongoose = require("mongoose")
-const uniqueValidator = require("mongoose-unique-validator")
 
 const devinetteSchema = mongoose.Schema({
   image: {
@@ -20,7 +19,5 @@ const devinetteSchema = mongoose.Schema({
     required: true,
   }
 });
-
-devinetteSchema.plugin(uniqueValidator)
 
 module.exports = mongoose.model("Devinette", devinetteSchema)

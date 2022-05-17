@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.TerreActivity">
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/sauvons"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:fontFamily="@font/sassoon_sans_slopestd_medium"
+        android:gravity="center"
+        android:text="Sauvons la planète Terre"
+        android:textColor="#52c0ee"
+        android:textSize="36sp" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="horizontal">
+
+      <ImageView
+        android:id="@+id/image_terre"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/terre_titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/terre_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:lineSpacingExtra="20px"
+        android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:layout_weight="1">
+
+        <ImageButton
+          android:id="@+id/prev"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:adjustViewBounds="true"
+          android:maxWidth="70dp"
+          android:maxHeight="70dp"
+          android:scaleType="fitCenter"
+          android:background="@null"
+          app:srcCompat="@drawable/btn_prev_150" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right">
+
+        <ImageButton
+          android:id="@+id/next"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:adjustViewBounds="true"
+          android:maxWidth="70dp"
+          android:maxHeight="70dp"
+          android:scaleType="fitCenter"
+          android:background="@null"
+          app:srcCompat="@drawable/btn_next_150"
+          />
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+
+</ScrollView>

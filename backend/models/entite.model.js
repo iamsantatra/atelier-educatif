@@ -1,5 +1,4 @@
 const mongoose = require("mongoose")
-const uniqueValidator = require("mongoose-unique-validator")
 
 const entiteSchema = mongoose.Schema({
   nom: {
@@ -16,7 +15,5 @@ const entiteSchema = mongoose.Schema({
     enum: ["fruitLegume", "animal"],
   }
 });
-
-entiteSchema.plugin(uniqueValidator)
 
 module.exports = mongoose.model("Entite", entiteSchema)

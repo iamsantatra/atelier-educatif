@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const uniqueValidator = require("mongoose-unique-validator")
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 const terreSchema = mongoose.Schema({
   image: {
@@ -16,6 +16,6 @@ const terreSchema = mongoose.Schema({
   }
 });
 
-terreSchema.plugin(uniqueValidator)
+terreSchema.plugin(mongoosePaginate);
 
 module.exports = mongoose.model("Terre", terreSchema)

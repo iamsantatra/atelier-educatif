@@ -1,4 +1,4 @@
-package com.example.ateliereducatif;
+package com.example.ateliereducatif.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
+
+import com.example.ateliereducatif.R;
 
 public class BackgroundSoundService extends Service {
     private static final String TAG = null;
