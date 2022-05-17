@@ -1,10 +1,12 @@
 package com.example.ateliereducatif.controller;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.example.ateliereducatif.R;
 import com.example.ateliereducatif.model.Terre;
@@ -27,6 +30,7 @@ import org.json.JSONObject;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,13 +39,15 @@ import retrofit2.Retrofit;
 
 public class TerreActivity extends AppCompatActivity {
 
-    ImageButton boutonPrev, boutonNext;
+    ImageButton boutonNext, boutonPrev;
     TextView textTitre, textDescription;
     ImageView imageTerre;
-
+    List<Terre> listeTerre;
     TerreService tService;
 
-    @Override
+    int increment = 0;
+
+  @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terre);
@@ -50,25 +56,55 @@ public class TerreActivity extends AppCompatActivity {
         Retrofit retrofitClient = RetrofitClient.getInstance();
         tService = retrofitClient.create(TerreService.class);
 
-
         //Init view
         textTitre = (TextView) findViewById(R.id.terre_titre);
         textDescription = (TextView) findViewById(R.id.terre_description);
-        imageTerre = (ImageView)  findViewById(R.id.image_terre);
 
-        Call<TerreRep> call = tService.liste(0, 1);
+        imageTerre = (ImageView) findViewById(R.id.image_terre);
+        boutonNext = (ImageButton) findViewById(R.id.next);
+    boutonPrev = (ImageButton) findViewById(R.id.prev);
+    ActionBar actionBar = getSupportActionBar();
+    actionBar.setHomeButtonEnabled(true);
+    actionBar.setDisplayHomeAsUpEnabled(true);
+
+    Call<TerreRep> call = tService.liste();
         call.enqueue(new Callback<TerreRep>() {
         @Override
         public void onResponse(Call<TerreRep> call, Response<TerreRep> response) {
           if(response.isSuccessful()) {
-            Terre terre = (Terre) response.body().getTerres().get(0);
-            textTitre.setText(terre.getTitre());
-            textDescription.setText(terre.getDescription());
-            Picasso.with(getApplicationContext()).load(terre.getImage()).into(imageTerre);
+            List<Terre> listeTerre = (List<Terre>) response.body().getTerres();
+            Terre t = (Terre) listeTerre.get(0);
+            System.out.println(t.getTitre());
+            textTitre.setText(t.getTitre());
+            textDescription.setText(t.getDescription());
+            Picasso.with(getApplicationContext()).load(t.getImage()).into(imageTerre);
             boutonNext.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View view) {
-                
+                if(increment<response.body().getTotalPages()) {
+                  boutonPrev.setVisibility(View.VISIBLE);
+                  increment++;
+                  textTitre.setText(listeTerre.get(increment).getTitre());
+                  textDescription.setText(listeTerre.get(increment).getDescription());
+                  Picasso.with(getApplicationContext()).load(listeTerre.get(increment).getImage()).into(imageTerre);
+                } else {
+                  boutonNext.setVisibility(View.GONE);
+                }
+              }
+            });
+
+            boutonPrev.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View view) {
+                if(increment>0) {
+                  boutonNext.setVisibility(View.VISIBLE);
+                  increment--;
+                  textTitre.setText(listeTerre.get(increment).getTitre());
+                  textDescription.setText(listeTerre.get(increment).getDescription());
+                  Picasso.with(getApplicationContext()).load(listeTerre.get(increment).getImage()).into(imageTerre);
+                } else {
+                  boutonPrev.setVisibility(View.GONE);
+                }
               }
             });
           }
@@ -89,4 +125,19 @@ public class TerreActivity extends AppCompatActivity {
         }
       });
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+      switch (item.getItemId()) {
+        case android.R.id.home:
+          // app icon in action bar clicked; go home
+          Intent intent = new Intent(this, MenuActivity.class);
+          intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+          startActivity(intent);
+          return true;
+        default:
+          return super.onOptionsItemSelected(item);
+      }
+  }
+
 }
