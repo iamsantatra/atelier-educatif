@@ -65,12 +65,12 @@ public class TerreActivity extends AppCompatActivity {
             textTitre.setText(terre.getTitre());
             textDescription.setText(terre.getDescription());
             Picasso.with(getApplicationContext()).load(terre.getImage()).into(imageTerre);
-            boutonNext.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View view) {
-                
-              }
-            });
+//            boutonNext.setOnClickListener(new View.OnClickListener() {
+//              @Override
+//              public void onClick(View view) {
+//
+//              }
+//            });
           }
           else {
             try {
