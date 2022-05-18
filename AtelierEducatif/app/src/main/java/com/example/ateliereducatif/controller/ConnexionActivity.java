@@ -1,11 +1,15 @@
 package com.example.ateliereducatif.controller;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,6 +43,8 @@ public class ConnexionActivity extends AppCompatActivity {
     // creating constant keys for shared preferences.
     public static final String SHARED_PREFS = "shared_prefs";
 
+
+
     @Override
     protected void onStop() {
         compositeDisposable.clear();
@@ -47,6 +53,13 @@ public class ConnexionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//        sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+//        System.out.println(sharedpreferences.getString("NOM_KEY", null));
+//        if(sharedpreferences.contains("NOM_KEY")) {
+//          Intent intent = new Intent(ConnexionActivity.this, MenuActivity.class);
+//          startActivity(intent);
+//          finish();
+//        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
 //        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"green\">"+ getString(R.string.app_name)+ "</font>"));
@@ -98,14 +111,14 @@ public class ConnexionActivity extends AppCompatActivity {
                     UtilisateurRep resultat = response.body();
 //                  Utilisateur user = (Utilisateur) resultat.getData();
                     Utilisateur user = (Utilisateur) response.body().getUtilisateur();
-                    System.out.println(user.getNom());
+//                    System.out.println(user.getNom());
 //                    Utilisateur user = (Utilisateur) objectUser;
 ////                    Toast.makeText(ConnexionActivity.this,  user.getNom(), Toast.LENGTH_SHORT).show();
-//                    sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-//                    SharedPreferences.Editor editor = sharedpreferences.edit();
-//                    editor.putString("NOM_KEY", user.getNom());
-//                    editor.putString("NOM_UTILISATEUR_KEY", user.getNomUtilisateur());
-//                    editor.putString("TOKEN_KEY", resultat.getToken());
+
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putString("NOM_KEY", user.getNom());
+                    editor.putString("NOM_UTILISATEUR_KEY", user.getNomUtilisateur());
+                    editor.putString("TOKEN_KEY", resultat.getToken());
 
 //                    editor.apply();
                     Intent intent = new Intent(ConnexionActivity.this, MenuActivity.class);

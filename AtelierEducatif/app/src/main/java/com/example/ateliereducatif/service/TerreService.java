@@ -18,5 +18,5 @@ public interface TerreService {
 
   //{{base_url_atelier}}terre/liste?page=0&size=1
   @GET(BASE_URL+"liste")
-  Call<TerreRep> liste(@Query("page") int page, @Query("size") int size);
+  Call<TerreRep> liste();
 }
