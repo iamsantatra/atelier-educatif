@@ -31,15 +31,15 @@ public class RecitationServiceTest extends TestCase {
     YoutubeService yService = retrofitClient.create(YoutubeService.class);
 
     ArrayList<Youtube> youtubeArrayList = new ArrayList<Youtube>();
-    Call<RecitationRep> call = rService.liste();
-    call.enqueue(new Callback<RecitationRep>() {
+    Call<Youtube> call = yService.getYoutube("");
+    call.enqueue(new Callback<Youtube>() {
       @Override
-      public void onResponse(Call<RecitationRep> call, Response<RecitationRep> response) {
+      public void onResponse(Call<Youtube> call, Response<Youtube> response) {
         System.out.println("ato");
         if(response.isSuccessful()) {
-          List<Recitation> listeRec = (List<Recitation>) response.body().getData();
+          List<Youtube> listeRec = (List<Youtube>) response.body();
 
-          assertEquals(listeRec.size(), 0);
+          assertEquals(listeRec.get(0).getAuthor_name(), "Bouchoo!");
         }
         else {
           System.out.println("ato");
@@ -54,7 +54,8 @@ public class RecitationServiceTest extends TestCase {
       }
 
       @Override
-      public void onFailure(Call<RecitationRep> call, Throwable t) {
+      public void onFailure(Call<Youtube> call, Throwable t) {
+        System.out.println("ato");
         System.out.println("erreur" + t);
 //          Toast.makeText(ConnexionActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
       }

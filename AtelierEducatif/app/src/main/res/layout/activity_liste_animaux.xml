@@ -7,12 +7,17 @@
     android:background="@drawable/bg_main"
     tools:context=".controller.ListeAnimauxActivity">
 
-    <GridView
-      android:id="@+id/idListeAnimaux"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:horizontalSpacing="6dp"
-      android:numColumns="2"
-      android:verticalSpacing="6dp" />
+  <GridView
+    android:id="@+id/idListeAnimaux"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:horizontalSpacing="6dp"
+    android:numColumns="2"
+    android:verticalSpacing="6dp"
+    tools:layout_editor_absoluteX="-27dp"
+    tools:layout_editor_absoluteY="81dp">
+
+
+  </GridView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

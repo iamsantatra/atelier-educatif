@@ -37,7 +37,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class TerreActivity extends AppCompatActivity {
+public class TerreActivity extends BaseActivity {
 
     ImageButton boutonNext, boutonPrev;
     TextView textTitre, textDescription;
@@ -52,6 +52,8 @@ public class TerreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terre);
 
+        TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
+        myTitleText.setText("Notre planète");
         //Init service
         Retrofit retrofitClient = RetrofitClient.getInstance();
         tService = retrofitClient.create(TerreService.class);
@@ -63,9 +65,7 @@ public class TerreActivity extends AppCompatActivity {
         imageTerre = (ImageView) findViewById(R.id.image_terre);
         boutonNext = (ImageButton) findViewById(R.id.next);
     boutonPrev = (ImageButton) findViewById(R.id.prev);
-    ActionBar actionBar = getSupportActionBar();
-    actionBar.setHomeButtonEnabled(true);
-    actionBar.setDisplayHomeAsUpEnabled(true);
+
 
     Call<TerreRep> call = tService.liste();
         call.enqueue(new Callback<TerreRep>() {
@@ -125,19 +125,4 @@ public class TerreActivity extends AppCompatActivity {
         }
       });
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-      switch (item.getItemId()) {
-        case android.R.id.home:
-          // app icon in action bar clicked; go home
-          Intent intent = new Intent(this, MenuActivity.class);
-          intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-          startActivity(intent);
-          return true;
-        default:
-          return super.onOptionsItemSelected(item);
-      }
-  }
-
 }

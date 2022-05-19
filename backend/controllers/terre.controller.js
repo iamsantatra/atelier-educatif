@@ -11,17 +11,11 @@ exports.listeTerre = async (req, res) => {
   const { page, size } = req.query;
   const { limit, offset } = getPagination(page, size);
   try {
-    let data = await Terre.paginate({}, { offset, limit });
+    let data = await Terre.find();
     console.log(data.docs)
     return res.status(200).json({
-      totalItems: data.totalDocs,
-      terres: data.docs,
-      totalPages: data.totalPages,
-      currentPage: data.page - 1,
-      hasNextPage: data.hasNextPage,
-      hasPrevPage: data.hasPrevPage,
-      nextPage: data.nextPage,
-      prevPage: data.prevPage
+      terres: data,
+      totalPages: data.length,
     });
   } catch(err) {
     return res.status(500).json({

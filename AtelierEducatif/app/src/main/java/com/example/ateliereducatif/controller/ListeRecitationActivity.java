@@ -2,7 +2,9 @@ package com.example.ateliereducatif.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.ateliereducatif.R;
+import com.example.ateliereducatif.adapter.EntiteAdapter;
 import com.example.ateliereducatif.adapter.RecitationAdapter;
+import com.example.ateliereducatif.model.Entite;
 import com.example.ateliereducatif.model.Recitation;
 import com.example.ateliereducatif.model.Terre;
 import com.example.ateliereducatif.model.Youtube;
@@ -17,6 +19,7 @@ import com.squareup.picasso.Picasso;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import org.json.JSONObject;
 
@@ -28,7 +31,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class ListeRecitationActivity extends AppCompatActivity {
+public class ListeRecitationActivity extends BaseActivity {
 
   GridView youtube;
   YoutubeService yService;
@@ -38,7 +41,8 @@ public class ListeRecitationActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
+    TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
+    myTitleText.setText("Récitation et comptine");
     //Init service
     Retrofit retrofitClient = RetrofitClient.getInstance();
     yService = retrofitClient.create(YoutubeService.class);
@@ -51,21 +55,12 @@ public class ListeRecitationActivity extends AppCompatActivity {
     call.enqueue(new Callback<RecitationRep>() {
       @Override
       public void onResponse(Call<RecitationRep> call, Response<RecitationRep> response) {
-        System.out.println("aty");
         if(response.isSuccessful()) {
           List<Recitation> listeRec = (List<Recitation>) response.body().getData();
-          for (Recitation rec :
-            listeRec) {
-              Call<Youtube> callYoutube = yService.getYoutube("https://www.youtube.com/oembed?url=http://www.youtube.com/watch?v="+rec.getLien());
-              try {
-                Youtube yt = callYoutube.execute().body();
-                youtubeArrayList.add(new Youtube(yt.getTitle(), yt.getThumbnail_url()));
-
-              } catch (Exception e) {
-                e.printStackTrace();
-              }
-          }
-
+          ArrayList<Youtube> listeYoutube = new Youtube().getYoutube(listeRec, yService);
+//          System.out.println(listeYoutube.get(0).getTitle());
+          RecitationAdapter rAdapter = new RecitationAdapter(ListeRecitationActivity.this, listeYoutube);
+          youtube.setAdapter(rAdapter);
         }
         else {
           try {
@@ -83,8 +78,5 @@ public class ListeRecitationActivity extends AppCompatActivity {
 //          Toast.makeText(ConnexionActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
       }
     });
-    System.out.println(youtubeArrayList.size());
-    RecitationAdapter rAdapter = new RecitationAdapter(this, youtubeArrayList);
-    youtube.setAdapter(rAdapter);
   }
 }
