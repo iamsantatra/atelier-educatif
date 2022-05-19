@@ -2,10 +2,12 @@ package com.example.ateliereducatif.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -55,29 +57,30 @@ public class ListeAnimauxActivity extends AppCompatActivity {
         });
     }
 
-  private void playAudio(String audioUrl, String nom) {
-    // initializing media player
-    mediaPlayer = new MediaPlayer();
+    private void playAudio(String audioUrl, String nom) {
+      // initializing media player
+      mediaPlayer = new MediaPlayer();
 
-    // below line is use to set the audio
-    // stream type for our media player.
-    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+      // below line is use to set the audio
+      // stream type for our media player.
+      mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-    // below line is use to set our
-    // url to our media player.
-    try {
-      mediaPlayer.setDataSource(audioUrl);
-      // below line is use to prepare
-      // and start our media player.
-      mediaPlayer.prepare();
-      mediaPlayer.start();
+      // below line is use to set our
+      // url to our media player.
+      try {
+        mediaPlayer.setDataSource(audioUrl);
+        // below line is use to prepare
+        // and start our media player.
+        mediaPlayer.prepare();
+        mediaPlayer.start();
 
-    } catch (Exception e) {
-      e.printStackTrace();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      // below line is use to display a toast message.
+      Toast.makeText(this, "Cri "+nom, Toast.LENGTH_SHORT).show();
     }
-    // below line is use to display a toast message.
-    Toast.makeText(this, "Cri "+nom, Toast.LENGTH_SHORT).show();
-  }
+
 
     public void getAnimaux() {
       Retrofit retrofitClient = RetrofitClient.getInstance();
@@ -112,4 +115,18 @@ public class ListeAnimauxActivity extends AppCompatActivity {
         }
       });
     }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case android.R.id.home:
+        // app icon in action bar clicked; go home
+        Intent intent = new Intent(this, MenuActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
+    }
+  }
 }
