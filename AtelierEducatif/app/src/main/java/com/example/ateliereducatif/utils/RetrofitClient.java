@@ -16,7 +16,7 @@ public class RetrofitClient {
         if(instance == null)
             instance = new Retrofit.Builder()
 //                .baseUrl("http://127.0.0.1:3000/api/")
-                    .baseUrl("http://10.0.2.2:3000/api/")
+                    .baseUrl("https://atelier-educatif.herokuapp.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         return instance;

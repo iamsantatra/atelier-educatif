@@ -53,7 +53,7 @@ public class ConnexionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+
 //        System.out.println(sharedpreferences.getString("NOM_KEY", null));
 //        if(sharedpreferences.contains("NOM_KEY")) {
 //          Intent intent = new Intent(ConnexionActivity.this, MenuActivity.class);
@@ -114,7 +114,7 @@ public class ConnexionActivity extends AppCompatActivity {
 //                    System.out.println(user.getNom());
 //                    Utilisateur user = (Utilisateur) objectUser;
 ////                    Toast.makeText(ConnexionActivity.this,  user.getNom(), Toast.LENGTH_SHORT).show();
-
+                    sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedpreferences.edit();
                     editor.putString("NOM_KEY", user.getNom());
                     editor.putString("NOM_UTILISATEUR_KEY", user.getNomUtilisateur());

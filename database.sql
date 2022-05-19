@@ -115,6 +115,49 @@ db.entites.insertMany(
 	]
 )
 
+db.entites.findOneAndUpdate(
+	{
+		'nom':'Tortue'
+	},
+	{
+		$set: {
+				'nom':'Poule', 'image': 'https://res.cloudinary.com/dyptj60q1/image/upload/v1652973160/Images/poule_kcu6pp.jpg', 
+				'cri': 'https://res.cloudinary.com/dyptj60q1/video/upload/v1652973137/Images/poule_egdixz.wav'
+			}
+	})
+
+db.entites.findOneAndUpdate(
+	{
+		'nom':'Cochon'
+	},
+	{
+		$set: {
+				'cri': 'https://res.cloudinary.com/dyptj60q1/video/upload/v1652973136/Images/pig_teyvli.mp3'
+			}
+	})
+
+db.entites.findOneAndUpdate(
+	{
+		'nom':'Lion'
+	},
+	{
+		$set: {
+				'cri': 'https://res.cloudinary.com/dyptj60q1/video/upload/v1652973137/Images/lion_wyhao9.wav'
+			}
+	})
+
+
+db.entites.findOneAndUpdate(
+	{
+		'nom':'Oie'
+	},
+	{
+		$set: {
+				'cri': 'https://res.cloudinary.com/dyptj60q1/video/upload/v1652973137/Images/oie_ouutlu.wav'
+			}
+	})
+
+
 db.recitations.insertMany(
 	[
 		{

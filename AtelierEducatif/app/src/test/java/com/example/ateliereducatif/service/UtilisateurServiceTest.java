@@ -1,5 +1,6 @@
 package com.example.ateliereducatif.service;
 
+import com.example.ateliereducatif.model.Utilisateur;
 import com.example.ateliereducatif.model.reponse.UtilisateurRep;
 import com.example.ateliereducatif.utils.RetrofitClient;
 
@@ -8,40 +9,55 @@ import junit.framework.TestCase;
 import org.json.JSONObject;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.util.HashMap;
 
 import retrofit2.Call;
+import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class UtilisateurServiceTest extends TestCase {
+public class UtilisateurServiceTest {
 
     @Test
     public void testConnexion() throws Exception {
+
+      Retrofit retrofitClient = RetrofitClient.getInstance();
+      UtilisateurService uService = retrofitClient.create(UtilisateurService.class);
         //Init service
-        Retrofit retrofitClient = RetrofitClient.getInstance();
-        UtilisateurService uService = retrofitClient.create(UtilisateurService.class);
+      HashMap<String, String> map = new HashMap<>();
+      map.put("nomUtilisateur", "leo2018");
+      map.put("motDePasse", "12345678");
 
-        HashMap<String, String> map = new HashMap<>();
-        map.put("nomUtilisateur", "leo2018");
-        map.put("motDePasse", "1234568");
-        Call<UtilisateurRep> call = uService.connexion(map);
+      Call<UtilisateurRep> call = uService.connexion(map);
+      call.enqueue(new Callback<UtilisateurRep>() {
+        @Override
+        public void onResponse(Call<UtilisateurRep> call, Response<UtilisateurRep> response) {
+          System.out.println("ato");
+          if(response.isSuccessful()) {
+            UtilisateurRep resultat = response.body();
+//                  Utilisateur user = (Utilisateur) resultat.getData();
+            Utilisateur user = (Utilisateur) response.body().getUtilisateur();
+//                    System.out.println(user.getNom());
+//                    Utilisateur user = (Utilisateur) objectUser;
+////                    Toast.makeText(ConnexionActivity.this,  user.getNom(), Toast.LENGTH_SHORT).show();
 
-        try {
-            //Magic is here at .execute() instead of .enqueue()
-            Response<UtilisateurRep> response = call.execute();
-            UtilisateurRep authResponse = response.body();
+//                    editor.apply();
+          }
+          else {
 
-            if(response.isSuccessful()) {
+            try {
+              JSONObject jObjError = new JSONObject(response.errorBody().string());
+              //                    System.out.println(jObjError)
+            } catch (Exception e) {
             }
-            else {
-                JSONObject jObjError = new JSONObject(response.errorBody().string());
-                System.out.println(jObjError);
-                assertEquals(jObjError.getString("message"), "Mt de passe incorrect");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+          }
         }
+
+        @Override
+        public void onFailure(Call<UtilisateurRep> call, Throwable t) {
+          System.out.println("erreur" + t);
+
+        }
+      });
     }
 }

@@ -6,7 +6,7 @@ exports.listeAnimaux = async (req, res, next) => {
   try {
     let listeAnimaux = await Entite.find({
       type: "animal"
-    });
+    }).sort({ 'nom': 'asc' });
     return res.status(200).json({
       message: "Animaux",
       data: listeAnimaux
@@ -23,7 +23,7 @@ exports.listeFruitEtLegume = async (req, res, next) => {
     try {
       let listeFruitEtLegume = await Entite.find({
         type: "fruitLegume"
-      });
+      }).sort({ 'nom': 'asc' });
       return res.status(200).json({
         message: "Fruits et Légumes",
         data: listeFruitEtLegume
@@ -42,7 +42,7 @@ exports.listeFruitEtLegume = async (req, res, next) => {
       let animal = await Entite.find({
         nom: {$regex: new RegExp(req.params.nom, "i")},
         type: "animal"
-      })
+      }).sort({ 'nom': 'asc' });
 
       if(animal == null) {
         return res.status(404).json({
@@ -69,7 +69,7 @@ exports.listeFruitEtLegume = async (req, res, next) => {
       let fruitLegume = await Entite.find({
         nom: {$regex: new RegExp(req.params.nom, "i")},
         type: "fruitLegume"
-      })
+      }).sort({ 'nom': 'asc' });
 
       if(fruitLegume == null) {
         return res.status(404).json({

@@ -13,6 +13,10 @@ const entiteSchema = mongoose.Schema({
     type: String,
     required: true,
     enum: ["fruitLegume", "animal"],
+  },
+  cri: {
+    type: String,
+    required: true
   }
 });
 

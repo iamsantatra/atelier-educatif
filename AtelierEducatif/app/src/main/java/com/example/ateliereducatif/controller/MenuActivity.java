@@ -18,7 +18,7 @@ import com.example.ateliereducatif.R;
 public class MenuActivity extends AppCompatActivity {
 
     public static final String SHARED_PREFS = "shared_prefs";
-    Button boutonConnexion;
+    Button boutonTerre, boutonRecitation, boutonAnimaux;
 
     SharedPreferences sharedpreferences;
     @Override
@@ -33,11 +33,31 @@ public class MenuActivity extends AppCompatActivity {
 
 //        Toast.makeText(this, sharedpreferences.getString("NOM_KEY", null), Toast.LENGTH_SHORT).show();
 
-      boutonConnexion = (Button) findViewById(R.id.notre_planete);
-      boutonConnexion.setOnClickListener(new View.OnClickListener() {
+      boutonTerre = (Button) findViewById(R.id.notre_planete);
+      boutonTerre.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
           Intent intent = new Intent(MenuActivity.this, TerreActivity.class);
+          startActivity(intent);
+          finish();
+        }
+      });
+
+      boutonRecitation = (Button) findViewById(R.id.recitation);
+      boutonRecitation.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+          Intent intent = new Intent(MenuActivity.this, ListeRecitationActivity.class);
+          startActivity(intent);
+          finish();
+        }
+      });
+
+      boutonAnimaux = (Button) findViewById(R.id.animaux);
+      boutonAnimaux.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+          Intent intent = new Intent(MenuActivity.this, ListeAnimauxActivity.class);
           startActivity(intent);
           finish();
         }

@@ -6,6 +6,15 @@ public class Entite {
   private String nom;
   private String image;
   private String type;
+  private String cri;
+
+  public String getCri() {
+    return cri;
+  }
+
+  public void setCri(String cri) {
+    this.cri = cri;
+  }
 
   public String getId() {
     return id;
@@ -42,10 +51,16 @@ public class Entite {
   public Entite() {
   }
 
-  public Entite(String id, String nom, String image, String type) {
-    this.id = id;
-    this.nom = nom;
-    this.image = image;
-    this.type = type;
+  public Entite(String nom, String image) {
+    this.setNom(nom);
+    this.setImage(image);
+  }
+
+  public Entite(String id, String nom, String image, String type, String cri) {
+    this.setId(id);
+    this.setNom(nom);
+    this.setImage(image);
+    this.setType(type);
+    this.setCri(cri);
   }
 }
