@@ -41,7 +41,9 @@
           android:layout_height="wrap_content"
           android:layout_gravity="center"
           android:text="Se connecter"
-          android:textColor="@color/green"
+          android:textColor="@color/white"
+          android:height="50px"
+          android:textSize="18sp"
           app:backgroundTint="#FFEB3B"
           app:iconTint="#070707" />
 

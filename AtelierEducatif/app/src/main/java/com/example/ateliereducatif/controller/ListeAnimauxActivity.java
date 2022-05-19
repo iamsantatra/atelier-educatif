@@ -53,7 +53,6 @@ public class ListeAnimauxActivity extends BaseActivity {
         animauxGV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
           @Override
           public void onItemClick(AdapterView<?> adapterView, View v, int i, long id) {
-
             playAudio(listeEntite.get(i).getCri(), listeEntite.get(i).getNom());
           }
         });
@@ -82,7 +81,6 @@ public class ListeAnimauxActivity extends BaseActivity {
       // below line is use to display a toast message.
       Toast.makeText(this, "Cri "+nom.substring(0, 1).toLowerCase()+nom.substring(1), Toast.LENGTH_SHORT).show();
     }
-
 
     public void getAnimaux() {
       Retrofit retrofitClient = RetrofitClient.getInstance();

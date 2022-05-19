@@ -54,21 +54,26 @@ public class TerreActivity extends BaseActivity {
 
         TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
         myTitleText.setText("Notre planète");
-        //Init service
-        Retrofit retrofitClient = RetrofitClient.getInstance();
-        tService = retrofitClient.create(TerreService.class);
 
-        //Init view
-        textTitre = (TextView) findViewById(R.id.terre_titre);
-        textDescription = (TextView) findViewById(R.id.terre_description);
+        getTerre();
+    }
 
-        imageTerre = (ImageView) findViewById(R.id.image_terre);
-        boutonNext = (ImageButton) findViewById(R.id.next);
-    boutonPrev = (ImageButton) findViewById(R.id.prev);
+    public void getTerre() {
 
+      //Init service
+      Retrofit retrofitClient = RetrofitClient.getInstance();
+      tService = retrofitClient.create(TerreService.class);
 
-    Call<TerreRep> call = tService.liste();
-        call.enqueue(new Callback<TerreRep>() {
+      //Init view
+      textTitre = (TextView) findViewById(R.id.terre_titre);
+      textDescription = (TextView) findViewById(R.id.terre_description);
+
+      imageTerre = (ImageView) findViewById(R.id.image_terre);
+      boutonNext = (ImageButton) findViewById(R.id.next);
+      boutonPrev = (ImageButton) findViewById(R.id.prev);
+
+      Call<TerreRep> call = tService.liste();
+      call.enqueue(new Callback<TerreRep>() {
         @Override
         public void onResponse(Call<TerreRep> call, Response<TerreRep> response) {
           if(response.isSuccessful()) {
@@ -87,8 +92,9 @@ public class TerreActivity extends BaseActivity {
                   textTitre.setText(listeTerre.get(increment).getTitre());
                   textDescription.setText(listeTerre.get(increment).getDescription());
                   Picasso.with(getApplicationContext()).load(listeTerre.get(increment).getImage()).into(imageTerre);
-                } else {
-                  boutonNext.setVisibility(View.GONE);
+                  if(increment == response.body().getTotalPages()-1) {
+                    boutonNext.setVisibility(View.GONE);
+                  }
                 }
               }
             });
@@ -102,8 +108,9 @@ public class TerreActivity extends BaseActivity {
                   textTitre.setText(listeTerre.get(increment).getTitre());
                   textDescription.setText(listeTerre.get(increment).getDescription());
                   Picasso.with(getApplicationContext()).load(listeTerre.get(increment).getImage()).into(imageTerre);
-                } else {
-                  boutonPrev.setVisibility(View.GONE);
+                  if(increment == 0) {
+                    boutonPrev.setVisibility(View.GONE);
+                  }
                 }
               }
             });
@@ -112,7 +119,7 @@ public class TerreActivity extends BaseActivity {
             try {
               JSONObject jObjError = new JSONObject(response.errorBody().string());
               //                    System.out.println(jObjError);
-//              Toast.makeText(ConnexionActivity.this, jObjError.getString("message"), Toast.LENGTH_SHORT).show();
+              //              Toast.makeText(ConnexionActivity.this, jObjError.getString("message"), Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
             }
           }
@@ -121,7 +128,7 @@ public class TerreActivity extends BaseActivity {
         @Override
         public void onFailure(Call<TerreRep> call, Throwable t) {
           System.out.println("erreur" + t);
-//          Toast.makeText(ConnexionActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+          //          Toast.makeText(ConnexionActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
         }
       });
     }
