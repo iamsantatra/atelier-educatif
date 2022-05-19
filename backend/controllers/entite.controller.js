@@ -39,11 +39,11 @@ exports.listeFruitEtLegume = async (req, res, next) => {
   exports.recherche_animal = async (req, res, next) => {
 
     try {
-      let animal = await Entite.findOne({
+      let animal = await Entite.find({
         nom: {$regex: new RegExp(req.params.nom, "i")},
         type: "animal"
       })
-  
+
       if(animal == null) {
         return res.status(404).json({
           message: "Animal non trouvé"
@@ -66,11 +66,11 @@ exports.listeFruitEtLegume = async (req, res, next) => {
   exports.recherche_fruitEtLegume = async (req, res, next) => {
 
     try {
-      let fruitLegume = await Entite.findOne({
+      let fruitLegume = await Entite.find({
         nom: {$regex: new RegExp(req.params.nom, "i")},
         type: "fruitLegume"
       })
-  
+
       if(fruitLegume == null) {
         return res.status(404).json({
           message: "Fruit ou légume non trouvé"
@@ -88,4 +88,3 @@ exports.listeFruitEtLegume = async (req, res, next) => {
       });
     };
   };
-    
