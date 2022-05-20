@@ -1,18 +1,19 @@
 package com.example.ateliereducatif.model;
 
-import android.util.Log;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.ateliereducatif.adapter.RecitationAdapter;
-import com.example.ateliereducatif.controller.ListeRecitationActivity;
-import com.example.ateliereducatif.model.reponse.RecitationRep;
+import com.example.ateliereducatif.R;
+import com.example.ateliereducatif.adapter.EntiteAdapter;
+import com.example.ateliereducatif.controller.ListeAnimauxActivity;
+import com.example.ateliereducatif.model.reponse.EntiteRep;
+import com.example.ateliereducatif.model.reponse.YoutubeRep;
 import com.example.ateliereducatif.service.RecitationService;
-import com.example.ateliereducatif.service.YoutubeService;
 import com.example.ateliereducatif.utils.RetrofitClient;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +22,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class Youtube {
+public class Youtube implements Serializable {
 
   private String title;
   private String author_name;
@@ -36,7 +37,8 @@ public class Youtube {
   private float thumbnail_width;
   private String thumbnail_url;
   private String html;
-
+  private String lien;
+  private List<Youtube> yListe;
 
   // Getter Methods
 
@@ -94,55 +96,63 @@ public class Youtube {
 
   // Setter Methods
 
-  public void setTitle( String title ) {
+  public void setTitle(String title) {
     this.title = title;
   }
 
-  public void setAuthor_name( String author_name ) {
+  public void setAuthor_name(String author_name) {
     this.author_name = author_name;
   }
 
-  public void setAuthor_url( String author_url ) {
+  public void setAuthor_url(String author_url) {
     this.author_url = author_url;
   }
 
-  public void setType( String type ) {
+  public void setType(String type) {
     this.type = type;
   }
 
-  public void setHeight( float height ) {
+  public void setHeight(float height) {
     this.height = height;
   }
 
-  public void setWidth( float width ) {
+  public void setWidth(float width) {
     this.width = width;
   }
 
-  public void setVersion( String version ) {
+  public void setVersion(String version) {
     this.version = version;
   }
 
-  public void setProvider_name( String provider_name ) {
+  public void setProvider_name(String provider_name) {
     this.provider_name = provider_name;
   }
 
-  public void setProvider_url( String provider_url ) {
+  public void setProvider_url(String provider_url) {
     this.provider_url = provider_url;
   }
 
-  public void setThumbnail_height( float thumbnail_height ) {
+  public void setThumbnail_height(float thumbnail_height) {
     this.thumbnail_height = thumbnail_height;
   }
 
-  public void setThumbnail_width( float thumbnail_width ) {
+  public String getLien() {
+    return lien;
+  }
+
+  public void setLien(String lien) {
+    this.lien = lien;
+  }
+
+  public void setThumbnail_width(float thumbnail_width) {
     this.thumbnail_width = thumbnail_width;
   }
 
-  public void setThumbnail_url( String thumbnail_url ) {
+  public void setThumbnail_url(String thumbnail_url) {
     this.thumbnail_url = thumbnail_url;
   }
 
-  public void setHtml( String html ) {
+  public void setHtml(String html) {
     this.html = html;
   }
 
@@ -154,27 +164,34 @@ public class Youtube {
   public Youtube() {
   }
 
-  public ArrayList<Youtube> getYoutube() {
-
-    ArrayList<Youtube> listeYoutube = new ArrayList<Youtube>();
+  public List<Youtube> getYoutube() {
 
     Retrofit retrofitClient = RetrofitClient.getInstance();
-    RecitationService rService = retrofitClient.create(RecitationService.class);
-    YoutubeService yService = retrofitClient.create(YoutubeService.class);
-
-    Call<RecitationRep> callRecitation = rService.liste();
-    try {
-      Response<RecitationRep> responseRec = callRecitation.execute();
-      List<Recitation> listRec = responseRec.body().getData();
-      for(Recitation rec: listRec) {
-        Call<Youtube> callYoutube = yService.getYoutube("https://www.youtube.com/oembed?url=http://www.youtube.com/watch?v="+rec.getLien());
-        System.out.println(callYoutube.request().toString());
-        Response<Youtube> responseYoutube = callYoutube.execute();
-        listeYoutube.add(new Youtube(responseYoutube.body().getTitle(), responseYoutube.body().getThumbnail_url() ));
+    RecitationService recitationService = retrofitClient.create(RecitationService.class);
+    Call<YoutubeRep> call = recitationService.listeYoutube();
+    System.out.println(call.request().toString());
+    call.enqueue(new Callback<YoutubeRep>() {
+      @Override
+      public void onResponse(Call<YoutubeRep> call, Response<YoutubeRep> response) {
+        if (response.isSuccessful()) {
+          yListe = response.body().getData();
+        } else {
+          try {
+            JSONObject jObjError = new JSONObject(response.errorBody().string());
+            System.out.println(jObjError);
+          } catch (Exception e) {
+            e.printStackTrace();
+          }
+        }
       }
-    } catch (Exception ex) {
-      ex.printStackTrace();
-    }
-    return listeYoutube;
+
+      @Override
+      public void onFailure(Call<YoutubeRep> call, Throwable t) {
+        System.out.println("erreur" + t);
+//        Toast.makeText(ListeAnimauxActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+      }
+    });
+    System.out.println(yListe.size());
+    return yListe;
   }
 }

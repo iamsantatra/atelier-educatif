@@ -48,6 +48,10 @@ public class ListeAnimauxActivity extends BaseActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_animaux);
+
+        TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
+        myTitleText.setText("Animaux");
+
         animauxGV = findViewById(R.id.idListeAnimaux);
         getAnimaux();
         animauxGV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -85,8 +89,6 @@ public class ListeAnimauxActivity extends BaseActivity {
     public void getAnimaux() {
       Retrofit retrofitClient = RetrofitClient.getInstance();
       entiteService = retrofitClient.create(EntiteService.class);
-      TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
-      myTitleText.setText("Animaux");
       ArrayList<Entite> entiteModelArrayList = new ArrayList<Entite>();
 
       Call<EntiteRep> call = entiteService.liste_animaux();
@@ -94,7 +96,7 @@ public class ListeAnimauxActivity extends BaseActivity {
         @Override
         public void onResponse(Call<EntiteRep> call, Response<EntiteRep> response) {
           if(response.isSuccessful()) {
-            listeEntite = (List<Entite>) response.body().getData();
+            listeEntite = response.body().getData();
             EntiteAdapter adapter = new EntiteAdapter(ListeAnimauxActivity.this, (ArrayList<Entite>) listeEntite);
             animauxGV.setAdapter(adapter);
           }

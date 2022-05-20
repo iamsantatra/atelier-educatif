@@ -20,7 +20,6 @@ import com.squareup.picasso.Picasso;
 
 public class RecitationAdapter extends ArrayAdapter<Youtube> {
 
-
   ArrayList<Youtube> youtubeArrayList;
   Context context;
 
@@ -34,13 +33,13 @@ public class RecitationAdapter extends ArrayAdapter<Youtube> {
   @Override
   public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-    if (convertView==null){
+    if (convertView == null) {
       LayoutInflater layoutInflater = (LayoutInflater)getContext().getSystemService(getContext().LAYOUT_INFLATER_SERVICE);
       convertView = layoutInflater.inflate(R.layout.card_item, null, true);
     }
     Youtube youtubeModel = getItem(position);
-    ImageView youtubeImage = (ImageView) convertView.findViewById(R.id.idYoutube);
-    TextView youtubeNom = (TextView) convertView.findViewById(R.id.idTitre);
+    ImageView youtubeImage = convertView.findViewById(R.id.idYoutube);
+    TextView youtubeNom = convertView.findViewById(R.id.idTitre);
     youtubeNom.setText(youtubeModel.getTitle());
     Picasso.with(context).load(youtubeModel.getThumbnail_url()).into(youtubeImage);
     return convertView;

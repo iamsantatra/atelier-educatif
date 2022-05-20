@@ -11,6 +11,7 @@ exports.listeYoutube = async (req, res, next) => {
     let youtubeListe = []
     for (let i = 0; i < listeRecitation.length; i++) {
       let youtube = await getYoutube(listeRecitation[i].lien)
+      youtube.lien = listeRecitation[i].lien
       youtubeListe.push(youtube)
     }
     console.log(youtubeListe);
