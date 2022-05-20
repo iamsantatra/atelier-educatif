@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +17,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
-public class RecitationActivity extends AppCompatActivity {
+public class RecitationActivity extends BaseActivity {
 
     Youtube youtube;
     TextView titre;
@@ -26,7 +27,8 @@ public class RecitationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recitation);
-
+        TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
+        myTitleText.setText("Récitation et comptine");
         Intent intent = getIntent();
         titre = findViewById(R.id.idTitreYoutube);
         if(intent.getExtras() != null) {
@@ -45,4 +47,19 @@ public class RecitationActivity extends AppCompatActivity {
           }
         });
     }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+
+    switch (item.getItemId()) {
+      case android.R.id.home:
+        // app icon in action bar clicked; go home
+        Intent intent = new Intent(this, ListeRecitationActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
+    }
+  }
 }
