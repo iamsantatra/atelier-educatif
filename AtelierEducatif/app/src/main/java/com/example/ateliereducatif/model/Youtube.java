@@ -163,35 +163,4 @@ public class Youtube implements Serializable {
 
   public Youtube() {
   }
-
-  public List<Youtube> getYoutube() {
-
-    Retrofit retrofitClient = RetrofitClient.getInstance();
-    RecitationService recitationService = retrofitClient.create(RecitationService.class);
-    Call<YoutubeRep> call = recitationService.listeYoutube();
-    System.out.println(call.request().toString());
-    call.enqueue(new Callback<YoutubeRep>() {
-      @Override
-      public void onResponse(Call<YoutubeRep> call, Response<YoutubeRep> response) {
-        if (response.isSuccessful()) {
-          yListe = response.body().getData();
-        } else {
-          try {
-            JSONObject jObjError = new JSONObject(response.errorBody().string());
-            System.out.println(jObjError);
-          } catch (Exception e) {
-            e.printStackTrace();
-          }
-        }
-      }
-
-      @Override
-      public void onFailure(Call<YoutubeRep> call, Throwable t) {
-        System.out.println("erreur" + t);
-//        Toast.makeText(ListeAnimauxActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-      }
-    });
-    System.out.println(yListe.size());
-    return yListe;
-  }
 }

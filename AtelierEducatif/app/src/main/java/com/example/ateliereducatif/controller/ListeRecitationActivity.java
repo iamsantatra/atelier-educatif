@@ -2,7 +2,6 @@ package com.example.ateliereducatif.controller;
 
 import com.example.ateliereducatif.R;
 import com.example.ateliereducatif.adapter.RecitationAdapter;
-import com.example.ateliereducatif.background.BackgroundService;
 import com.example.ateliereducatif.model.Youtube;
 import com.example.ateliereducatif.model.reponse.YoutubeRep;
 import com.example.ateliereducatif.service.RecitationService;

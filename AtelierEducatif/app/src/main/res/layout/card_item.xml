@@ -26,7 +26,7 @@
       android:scaleType="centerCrop" />
 
     <TextView
-      android:id="@+id/idTitreYoutube"
+      android:id="@+id/idTitre"
       android:textSize="14.0sp"
       android:textStyle="normal"
       android:layout_width="fill_parent"
