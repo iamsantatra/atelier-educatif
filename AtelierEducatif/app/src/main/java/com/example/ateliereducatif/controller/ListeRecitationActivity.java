@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.ateliereducatif.R;
 import com.example.ateliereducatif.adapter.EntiteAdapter;
 import com.example.ateliereducatif.adapter.RecitationAdapter;
+import com.example.ateliereducatif.background.BackgroundService;
 import com.example.ateliereducatif.model.Entite;
 import com.example.ateliereducatif.model.Recitation;
 import com.example.ateliereducatif.model.Terre;
@@ -16,6 +17,7 @@ import com.example.ateliereducatif.service.YoutubeService;
 import com.example.ateliereducatif.utils.RetrofitClient;
 import com.squareup.picasso.Picasso;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
@@ -39,6 +41,8 @@ public class ListeRecitationActivity extends BaseActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
+    Intent intent = new Intent(ListeRecitationActivity.this, BackgroundService.class);
+    startService(intent);
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
@@ -50,33 +54,39 @@ public class ListeRecitationActivity extends BaseActivity {
 
     youtube = findViewById(R.id.idYoutubeGrid);
 
-    ArrayList<Youtube> youtubeArrayList = new ArrayList<Youtube>();
-    Call<RecitationRep> call = rService.liste();
-    call.enqueue(new Callback<RecitationRep>() {
-      @Override
-      public void onResponse(Call<RecitationRep> call, Response<RecitationRep> response) {
-        if(response.isSuccessful()) {
-          List<Recitation> listeRec = (List<Recitation>) response.body().getData();
-          ArrayList<Youtube> listeYoutube = new Youtube().getYoutube(listeRec, yService);
+//    ArrayList<Youtube> youtubeArrayList = new ArrayList<Youtube>();
+//    Call<RecitationRep> call = rService.liste();
+//    call.enqueue(new Callback<RecitationRep>() {
+//      @Override
+//      public void onResponse(Call<RecitationRep> call, Response<RecitationRep> response) {
+//        if(response.isSuccessful()) {
+//          List<Recitation> listeRec = (List<Recitation>) response.body().getData();
+//          ArrayList<Youtube> listeYoutube = new Youtube().getYoutube(listeRec, yService);
 //          System.out.println(listeYoutube.get(0).getTitle());
-          RecitationAdapter rAdapter = new RecitationAdapter(ListeRecitationActivity.this, listeYoutube);
-          youtube.setAdapter(rAdapter);
-        }
-        else {
-          try {
-            JSONObject jObjError = new JSONObject(response.errorBody().string());
-            //                    System.out.println(jObjError);
-//              Toast.makeText(ConnexionActivity.this, jObjError.getString("message"), Toast.LENGTH_SHORT).show();
-          } catch (Exception e) {
-          }
-        }
-      }
+//          RecitationAdapter rAdapter = new RecitationAdapter(ListeRecitationActivity.this, listeYoutube);
+//          youtube.setAdapter(rAdapter);
+//        }
+//        else {
+//          try {
+//            JSONObject jObjError = new JSONObject(response.errorBody().string());
+//            //                    System.out.println(jObjError);
+////              Toast.makeText(ConnexionActivity.this, jObjError.getString("message"), Toast.LENGTH_SHORT).show();
+//          } catch (Exception e) {
+//          }
+//        }
+//      }
+//
+//      @Override
+//      public void onFailure(Call<RecitationRep> call, Throwable t) {
+//        System.out.println("erreur" + t);
+////          Toast.makeText(ConnexionActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+//      }
+//    });
 
-      @Override
-      public void onFailure(Call<RecitationRep> call, Throwable t) {
-        System.out.println("erreur" + t);
-//          Toast.makeText(ConnexionActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-      }
-    });
+
+
+//      RecitationAdapter rAdapter = new RecitationAdapter(ListeRecitationActivity.getContext(), new Youtube().getYoutube());
+//      youtube.setAdapter(rAdapter);
+
   }
 }

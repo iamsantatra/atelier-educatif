@@ -1,5 +1,17 @@
 package com.example.ateliereducatif.model;
 
+import com.example.ateliereducatif.model.reponse.RecitationRep;
+import com.example.ateliereducatif.service.RecitationService;
+import com.example.ateliereducatif.service.YoutubeService;
+import com.example.ateliereducatif.utils.RetrofitClient;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+
 public class Recitation {
 
 

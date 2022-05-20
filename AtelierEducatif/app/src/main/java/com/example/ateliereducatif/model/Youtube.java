@@ -5,7 +5,9 @@ import android.util.Log;
 import com.example.ateliereducatif.adapter.RecitationAdapter;
 import com.example.ateliereducatif.controller.ListeRecitationActivity;
 import com.example.ateliereducatif.model.reponse.RecitationRep;
+import com.example.ateliereducatif.service.RecitationService;
 import com.example.ateliereducatif.service.YoutubeService;
+import com.example.ateliereducatif.utils.RetrofitClient;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -17,6 +19,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class Youtube {
 
@@ -151,42 +154,27 @@ public class Youtube {
   public Youtube() {
   }
 
-  public ArrayList<Youtube> getYoutube(List<Recitation> listeRecitation, YoutubeService youtubeService) {
+  public ArrayList<Youtube> getYoutube() {
 
     ArrayList<Youtube> listeYoutube = new ArrayList<Youtube>();
-//    for(Recitation recitation: listeRecitation) {
-      String url = "https://www.youtube.com/oembed?url=http://www.youtube.com/watch?v="+"gaRhNHM2lZo";
 
-      Call<Youtube> callYoutube = youtubeService.getYoutube(url);
-      System.out.println(callYoutube.request());
-      callYoutube.enqueue(new Callback<Youtube>() {
-        @Override
-        public void onResponse(Call<Youtube> call, Response<Youtube> response) {
-          System.out.println("tafiditra");
-          if(response.isSuccessful()) {
-              System.out.println("tafita");
-              Log.d("response", response.toString());
-              listeYoutube.add(new Youtube(response.body().getTitle(), response.body().getThumbnail_url()));
-          }
-          else {
-            System.out.println("tsy tafita");
-            try {
-              JSONObject jObjError = new JSONObject(response.errorBody().string());
-//              System.out.println("erreur "+ jObjError.getString("message"));
-//              Toast.makeText(ConnexionActivity.this, jObjError.getString("message"), Toast.LENGTH_SHORT).show();
-            } catch (Exception e) {
-              e.printStackTrace();
-            }
-          }
-        }
+    Retrofit retrofitClient = RetrofitClient.getInstance();
+    RecitationService rService = retrofitClient.create(RecitationService.class);
+    YoutubeService yService = retrofitClient.create(YoutubeService.class);
 
-        @Override
-        public void onFailure(Call<Youtube> call, Throwable t) {
-          System.out.println("erreur" + t);
-//          Toast.makeText(ConnexionActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-      });
-//    }
+    Call<RecitationRep> callRecitation = rService.liste();
+    try {
+      Response<RecitationRep> responseRec = callRecitation.execute();
+      List<Recitation> listRec = responseRec.body().getData();
+      for(Recitation rec: listRec) {
+        Call<Youtube> callYoutube = yService.getYoutube("https://www.youtube.com/oembed?url=http://www.youtube.com/watch?v="+rec.getLien());
+        System.out.println(callYoutube.request().toString());
+        Response<Youtube> responseYoutube = callYoutube.execute();
+        listeYoutube.add(new Youtube(responseYoutube.body().getTitle(), responseYoutube.body().getThumbnail_url() ));
+      }
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
     return listeYoutube;
   }
 }
