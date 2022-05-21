@@ -20,7 +20,7 @@ import com.example.ateliereducatif.R;
 public class MenuActivity extends AppCompatActivity {
 
     public static final String SHARED_PREFS = "shared_prefs";
-    Button boutonTerre, boutonRecitation, boutonAnimaux;
+    Button boutonTerre, boutonRecitation, boutonAnimaux, boutonAlphabet, boutonTable;
 
     SharedPreferences sharedpreferences;
     @Override
@@ -66,6 +66,26 @@ public class MenuActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
           Intent intent = new Intent(MenuActivity.this, ListeAnimauxActivity.class);
+          startActivity(intent);
+          finish();
+        }
+      });
+
+      boutonAlphabet = (Button) findViewById(R.id.alphabet);
+      boutonAlphabet.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+          Intent intent = new Intent(MenuActivity.this, AlphabetActivity.class);
+          startActivity(intent);
+          finish();
+        }
+      });
+
+      boutonTable = (Button) findViewById(R.id.table_multiplication);
+      boutonTable.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+          Intent intent = new Intent(MenuActivity.this, TableActivity.class);
           startActivity(intent);
           finish();
         }
