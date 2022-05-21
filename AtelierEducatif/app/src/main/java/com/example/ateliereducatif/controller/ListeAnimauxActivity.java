@@ -42,7 +42,7 @@ import retrofit2.Retrofit;
 
 public class ListeAnimauxActivity extends BaseActivity {
 
-    GridView animauxGV;
+    GridView entiteGV;
     EntiteService entiteService;
     List<Entite> listeEntite;
     MediaPlayer mediaPlayer;
@@ -55,15 +55,22 @@ public class ListeAnimauxActivity extends BaseActivity {
 
         TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
         myTitleText.setText("Animaux");
-//        getActionBar().setDisplayShowHomeEnabled(false);
-        animauxGV = findViewById(R.id.idListeAnimaux);
-        getAnimaux();
-        animauxGV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-          @Override
-          public void onItemClick(AdapterView<?> adapterView, View v, int i, long id) {
-            playAudio(listeEntite.get(i).getCri(), listeEntite.get(i).getNom());
-          }
-        });
+
+        Bundle extras= getIntent().getExtras();
+        String click= extras.getString("click");
+        entiteGV = findViewById(R.id.idListeAnimaux);
+        if(click.compareTo("animaux")==0){
+          getAnimaux();
+          entiteGV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View v, int i, long id) {
+              playAudio(listeEntite.get(i).getCri(), listeEntite.get(i).getNom());
+            }
+          });
+        }
+        if(click.compareTo("fruitEtLegume")==0){
+          getFruitEtLegume();
+        }
     }
 
     private void playAudio(String audioUrl, String nom) {
@@ -102,7 +109,7 @@ public class ListeAnimauxActivity extends BaseActivity {
           if(response.isSuccessful()) {
             listeEntite = response.body().getData();
             EntiteAdapter adapter = new EntiteAdapter(ListeAnimauxActivity.this, (ArrayList<Entite>) listeEntite);
-            animauxGV.setAdapter(adapter);
+            entiteGV.setAdapter(adapter);
           }
           else {
             try {
@@ -156,4 +163,36 @@ public class ListeAnimauxActivity extends BaseActivity {
   }
 
 
+    public void getFruitEtLegume() {
+      Retrofit retrofitClient = RetrofitClient.getInstance();
+      entiteService = retrofitClient.create(EntiteService.class);
+      ArrayList<Entite> entiteModelArrayList = new ArrayList<Entite>();
+
+      Call<EntiteRep> call = entiteService.liste_fruitsEtLegumes();
+      call.enqueue(new Callback<EntiteRep>() {
+        @Override
+        public void onResponse(Call<EntiteRep> call, Response<EntiteRep> response) {
+          if(response.isSuccessful()) {
+            listeEntite = response.body().getData();
+            EntiteAdapter adapter = new EntiteAdapter(ListeAnimauxActivity.this, (ArrayList<Entite>) listeEntite);
+            entiteGV.setAdapter(adapter);
+          }
+          else {
+            try {
+              JSONObject jObjError = new JSONObject(response.errorBody().string());
+              //                    System.out.println(jObjError);
+              Toast.makeText(ListeAnimauxActivity.this, jObjError.getString("message"), Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+              e.printStackTrace();
+            }
+          }
+        }
+
+        @Override
+        public void onFailure(Call<EntiteRep> call, Throwable t) {
+          System.out.println("erreur" + t);
+          Toast.makeText(ListeAnimauxActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+      });
+    }
 }
