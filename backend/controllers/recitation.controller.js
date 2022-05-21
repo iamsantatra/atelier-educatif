@@ -1,4 +1,32 @@
 const Recitation = require("../models/recitation.model")
+const fetch = require('node-fetch');
+
+async function getYoutube(id) {
+  return await fetch("https://www.youtube.com/oembed?url=http://www.youtube.com/watch?v="+id).then(res => res.json())
+};
+
+exports.listeYoutube = async (req, res, next) => {
+  try {
+    let listeRecitation = await Recitation.find();
+    let youtubeListe = []
+    for (let i = 0; i < listeRecitation.length; i++) {
+      let youtube = await getYoutube(listeRecitation[i].lien)
+      youtube.lien = listeRecitation[i].lien
+      youtubeListe.push(youtube)
+    }
+    console.log(youtubeListe);
+    return res.status(200).json({
+      message: "Vidéos youtube",
+      data: youtubeListe
+    });
+  } catch(err) {
+    console.log(err)
+    return res.status(500).json({
+      message: "Vidéos youtube",
+      error: errr
+    });
+  };
+}
 
 exports.listeRecitation = async (req, res, next) => {
     try {

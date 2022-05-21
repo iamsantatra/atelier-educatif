@@ -7,42 +7,15 @@
     android:background="@drawable/bg_main"
     tools:context=".controller.ListeAnimauxActivity">
 
-
-
-
-  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity" >
-
-    <EditText
-      android:id="@+id/editText1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentTop="true"
-      android:layout_centerHorizontal="true"
-      android:ems="10"
-      android:hint="Enter Value Here" >
-    </EditText>
-
     <GridView
       android:id="@+id/idListeAnimaux"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:horizontalSpacing="6dp"
       android:numColumns="2"
-      android:verticalSpacing="6dp" />
-
-    <Button
-      android:id="@+id/button1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/editText1"
-      android:layout_centerHorizontal="true"
-      android:text="Click Here to Add Item" />
-
-</RelativeLayout>
+      android:verticalSpacing="6dp"
+      tools:layout_editor_absoluteX="-27dp"
+      tools:layout_editor_absoluteY="81dp" />
 
 
 

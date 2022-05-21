@@ -1,6 +1,7 @@
 package com.example.ateliereducatif.controller;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -13,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ateliereducatif.R;
@@ -62,6 +64,12 @@ public class ConnexionActivity extends AppCompatActivity {
 //        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.actionbar);
+        TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
+        myTitleText.setText("KILONGA");
 //        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"green\">"+ getString(R.string.app_name)+ "</font>"));
 
         //Init service

@@ -40,6 +40,17 @@ db.terres.insertMany(
   ]
 )
 
+db.terres.findOneAndUpdate(
+	{
+		'titre':'Trier ses déchets'
+	},
+	{
+		$set: {
+				'image': 'https://res.cloudinary.com/dyptj60q1/image/upload/v1652355353/Images/jouet_x1lgok.jpg'
+			}
+	})
+
+
 db.entites.insertMany(
 	[
 		{
@@ -114,6 +125,7 @@ db.entites.insertMany(
 		}
 	]
 )
+
 
 db.entites.findOneAndUpdate(
 	{

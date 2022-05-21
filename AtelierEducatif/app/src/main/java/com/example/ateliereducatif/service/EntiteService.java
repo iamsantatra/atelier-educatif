@@ -16,8 +16,7 @@ public interface EntiteService {
   @GET(BASE_URL+"liste_animaux")
   Call<EntiteRep> liste_animaux();
 
-//  @GET(BASE_URL+"recherche_animal")
-//  Call<EntiteRep> (@Path("nom") String nom,
-//                             @Query("api_key") String apiKey);
+  @GET(BASE_URL+"liste_fruitsEtLegumes")
+  Call<EntiteRep> liste_fruitsEtLegumes();
 
 }
