@@ -130,37 +130,36 @@ public class ListeAnimauxActivity extends BaseActivity {
       });
     }
 
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-      getMenuInflater().inflate(R.menu.search, menu);
-      MenuItem menuItem = menu.findItem(R.id.recherche);
+//  @Override
+//  public boolean onCreateOptionsMenu(Menu menu) {
+//      MenuItem menuItem = menu.findItem(R.id.recherche);
+//
+//      SearchView searchV = (SearchView) menuItem.getActionView();
+//      searchV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//        @Override
+//        public boolean onQueryTextSubmit(String s) {
+//          return false;
+//        }
+//
+//        @Override
+//        public boolean onQueryTextChange(String s) {
+//          return true;
+//        }
+//      });
+//
+//      return true;
+//  }
 
-      SearchView searchV = (SearchView) menuItem.getActionView();
-      searchV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-        @Override
-        public boolean onQueryTextSubmit(String s) {
-          return false;
-        }
-
-        @Override
-        public boolean onQueryTextChange(String s) {
-          return true;
-        }
-      });
-
-      return true;
-  }
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-      int id = item.getItemId();
-
-      if(id == R.id.recherche) {
-        return true;
-      }
-
-      return super.onOptionsItemSelected(item);
-  }
+//  @Override
+//  public boolean onOptionsItemSelected(MenuItem item) {
+//      int id = item.getItemId();
+//
+//      if(id == R.id.recherche) {
+//        return true;
+//      }
+//
+//      return super.onOptionsItemSelected(item);
+//  }
 
 
     public void getFruitEtLegume() {

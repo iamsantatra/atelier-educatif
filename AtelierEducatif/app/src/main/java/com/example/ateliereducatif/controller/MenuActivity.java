@@ -101,25 +101,19 @@ public class MenuActivity extends AppCompatActivity {
       });
     }
 
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    getMenuInflater().inflate(R.menu.main_menu, menu);
-    // first parameter is the file for icon and second one is menu
-    return super.onCreateOptionsMenu(menu);
-  }
 
   @Override
-  public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-    // We are using switch case because multiple icons can be kept
+  public boolean onOptionsItemSelected(MenuItem item) {
+
     switch (item.getItemId()) {
-      case R.id.logoutButton:
-        SharedPreferences settings = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-        settings.edit().clear().commit();
-        Intent intent = new Intent(MenuActivity.this, ConnexionActivity.class);
-        startActivity(intent);
+      case R.id.menuButton:
+        Intent intent2 = new Intent(this, ConnexionActivity.class);
+        startActivity(intent2);
         finish();
-        break;
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
+
     }
-    return super.onOptionsItemSelected(item);
   }
 }
