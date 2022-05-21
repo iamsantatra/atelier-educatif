@@ -44,4 +44,6 @@ public class RecitationAdapter extends ArrayAdapter<Youtube> {
     Picasso.with(context).load(youtubeModel.getThumbnail_url()).into(youtubeImage);
     return convertView;
   }
+
+
 }
