@@ -22,12 +22,11 @@ public class BaseActivity extends AppCompatActivity {
       case android.R.id.home:
         // app icon in action bar clicked; go home
         Intent intent1 = new Intent(this, MenuActivity.class);
-        intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent1);
         return true;
       case R.id.menuButton:
-        Intent intent2 = new Intent(this, ConnexionActivity.class);
+        Intent intent2 = new Intent(this, SettingsActivity.class);
         startActivity(intent2);
-        finish();
         return true;
       default:
         return super.onOptionsItemSelected(item);

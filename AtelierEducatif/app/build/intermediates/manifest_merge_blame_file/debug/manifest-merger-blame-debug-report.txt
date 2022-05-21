@@ -5,80 +5,144 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="16"
-8-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml
+8        android:minSdkVersion="17"
+8-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml
+9-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:4:5-67
-11-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:4:22-64
+11-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:5:3-65
+11-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:5:20-62
 12
-13    <application
-13-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:5:5-25:19
-14        android:allowBackup="true"
-14-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:7:9-35
-15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.7.0] C:\Users\LENOVO\.gradle\caches\transforms-3\b9e4376e452ce4f1a2bbb1fc4b534124\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
-16        android:debuggable="true"
-17        android:icon="@mipmap/ic_launcher"
-17-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:8:9-43
-18        android:label="@string/app_name"
-18-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:9:9-41
-19        android:roundIcon="@mipmap/ic_launcher_round"
-19-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:10:9-54
-20        android:supportsRtl="true"
-20-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:11:9-35
-21        android:testOnly="true"
-22        android:theme="@style/Theme.AtelierEducatif"
-22-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:12:9-53
-23        android:usesCleartextTraffic="true" >
-23-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:6:9-44
-24        <activity
-24-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:14:9-16:40
-25            android:name="com.example.ateliereducatif.ConnexionActivity"
-25-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:15:13-46
-26            android:exported="false" />
-26-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:16:13-37
-27        <activity
-27-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:17:9-24:20
-28            android:name="com.example.ateliereducatif.MainActivity"
-28-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:18:13-41
-29            android:exported="true" >
-29-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:19:13-36
-30            <intent-filter>
-30-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:20:13-23:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:21:17-69
-31-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:21:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:22:17-77
-33-->C:\Users\LENOVO\AndroidStudioProjects\AtelierEducatif\app\src\main\AndroidManifest.xml:22:27-74
-34            </intent-filter>
-35        </activity>
-36
-37        <provider
-37-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-38            android:name="androidx.startup.InitializationProvider"
-38-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
-39            android:authorities="com.example.ateliereducatif.androidx-startup"
-39-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
-40            android:exported="false" >
-40-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
-41            <meta-data
-41-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-42                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-42-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
-43                android:value="androidx.startup" />
-43-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
-44            <meta-data
-44-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\LENOVO\.gradle\caches\transforms-3\bdba8a1b7f77d959878d5a52670cf96f\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-45                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-45-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\LENOVO\.gradle\caches\transforms-3\bdba8a1b7f77d959878d5a52670cf96f\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-46                android:value="androidx.startup" />
-46-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\LENOVO\.gradle\caches\transforms-3\bdba8a1b7f77d959878d5a52670cf96f\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-47        </provider>
-48    </application>
-49
-50</manifest>
+13    <queries>
+13-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:7:3-11:13
+14        <intent>
+14-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:8:5-10:14
+15            <action android:name="com.google.android.youtube.api.service.START" />
+15-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:9:7-77
+15-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:9:15-74
+16        </intent>
+17    </queries>
+18
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1] C:\Users\LENOVO\.gradle\caches\transforms-3\7336dfbfce752542c6bb78b65bae2c18\transformed\core-11.0.1\AndroidManifest.xml:10:5-79
+19-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1] C:\Users\LENOVO\.gradle\caches\transforms-3\7336dfbfce752542c6bb78b65bae2c18\transformed\core-11.0.1\AndroidManifest.xml:10:22-76
+20
+21    <application
+21-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:13:3-58:17
+22        android:allowBackup="true"
+22-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:14:5-31
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.7.0] C:\Users\LENOVO\.gradle\caches\transforms-3\b9e4376e452ce4f1a2bbb1fc4b534124\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:icon="@drawable/ic_boy"
+25-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:15:5-36
+26        android:label="@string/app_name"
+26-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:16:5-37
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:17:5-50
+28        android:supportsRtl="true"
+28-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:18:5-31
+29        android:testOnly="true"
+30        android:theme="@style/Theme.AtelierEducatif" >
+30-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:19:5-49
+31        <activity
+31-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:20:5-22:34
+32            android:name="com.example.ateliereducatif.controller.TableActivity"
+32-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:21:7-47
+33            android:exported="false" />
+33-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:22:7-31
+34        <activity
+34-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:23:5-25:34
+35            android:name="com.example.ateliereducatif.controller.AlphabetActivity"
+35-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:24:7-50
+36            android:exported="false" />
+36-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:25:7-31
+37        <activity
+37-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:26:5-28:34
+38            android:name="com.example.ateliereducatif.controller.ListeAnimauxActivity"
+38-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:27:7-54
+39            android:exported="false" />
+39-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:28:7-31
+40        <activity
+40-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:29:5-31:34
+41            android:name="com.example.ateliereducatif.controller.ListeRecitationActivity"
+41-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:30:7-57
+42            android:exported="false" />
+42-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:31:7-31
+43        <activity
+43-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:32:5-34:34
+44            android:name="com.example.ateliereducatif.controller.RecitationActivity"
+44-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:33:7-52
+45            android:exported="false" />
+45-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:34:7-31
+46        <activity
+46-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:35:5-38:63
+47            android:name="com.example.ateliereducatif.controller.TerreActivity"
+47-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:36:7-47
+48            android:exported="false"
+48-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:37:7-31
+49            android:parentActivityName="com.example.ateliereducatif.controller.MenuActivity" />
+49-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:38:7-60
+50        <activity
+50-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:39:5-41:34
+51            android:name="com.example.ateliereducatif.controller.MenuActivity"
+51-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:40:7-46
+52            android:exported="false" />
+52-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:41:7-31
+53        <activity
+53-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:42:5-44:34
+54            android:name="com.example.ateliereducatif.controller.ConnexionActivity"
+54-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:43:7-51
+55            android:exported="false" />
+55-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:44:7-31
+56        <activity
+56-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:45:5-47:34
+57            android:name="com.example.ateliereducatif.controller.SettingsActivity"
+57-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:46:7-50
+58            android:exported="false" />
+58-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:47:7-31
+59        <activity
+59-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:48:5-57:16
+60            android:name="com.example.ateliereducatif.controller.MainActivity"
+60-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:49:7-46
+61            android:exported="true"
+61-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:50:7-30
+62            android:theme="@style/SplashScreenTheme" >
+62-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:51:7-47
+63            <intent-filter>
+63-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:52:7-56:23
+64                <action android:name="android.intent.action.MAIN" />
+64-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:53:9-61
+64-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:53:17-58
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:55:9-69
+66-->F:\ITU\Master\M1\S7\mobile\projet\atelier\AtelierEducatif\app\src\main\AndroidManifest.xml:55:19-66
+67            </intent-filter>
+68        </activity>
+69
+70        <provider
+70-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+71            android:name="androidx.startup.InitializationProvider"
+71-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+72            android:authorities="com.example.ateliereducatif.androidx-startup"
+72-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+73            android:exported="false" >
+73-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+74            <meta-data
+74-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+75                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+75-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+76                android:value="androidx.startup" />
+76-->[androidx.emoji2:emoji2:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\2c96a293c0a835e94af1ddc4d74ff22d\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+77            <meta-data
+77-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\LENOVO\.gradle\caches\transforms-3\bdba8a1b7f77d959878d5a52670cf96f\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+78                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+78-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\LENOVO\.gradle\caches\transforms-3\bdba8a1b7f77d959878d5a52670cf96f\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+79                android:value="androidx.startup" />
+79-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\LENOVO\.gradle\caches\transforms-3\bdba8a1b7f77d959878d5a52670cf96f\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+80        </provider>
+81    </application>
+82
+83</manifest>

@@ -46,8 +46,9 @@ public class ListeAnimauxActivity extends BaseActivity {
     EntiteService entiteService;
     List<Entite> listeEntite;
     MediaPlayer mediaPlayer;
+    EntiteAdapter adapter;
 
-    @Override
+  @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -108,7 +109,7 @@ public class ListeAnimauxActivity extends BaseActivity {
         public void onResponse(Call<EntiteRep> call, Response<EntiteRep> response) {
           if(response.isSuccessful()) {
             listeEntite = response.body().getData();
-            EntiteAdapter adapter = new EntiteAdapter(ListeAnimauxActivity.this, (ArrayList<Entite>) listeEntite);
+            adapter = new EntiteAdapter(ListeAnimauxActivity.this, (ArrayList<Entite>) listeEntite);
             entiteGV.setAdapter(adapter);
           }
           else {
@@ -130,36 +131,37 @@ public class ListeAnimauxActivity extends BaseActivity {
       });
     }
 
-//  @Override
-//  public boolean onCreateOptionsMenu(Menu menu) {
-//      MenuItem menuItem = menu.findItem(R.id.recherche);
-//
-//      SearchView searchV = (SearchView) menuItem.getActionView();
-//      searchV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//        @Override
-//        public boolean onQueryTextSubmit(String s) {
-//          return false;
-//        }
-//
-//        @Override
-//        public boolean onQueryTextChange(String s) {
-//          return true;
-//        }
-//      });
-//
-//      return true;
-//  }
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+        MenuItem menuItem = menu.findItem(R.id.recherche);
 
-//  @Override
-//  public boolean onOptionsItemSelected(MenuItem item) {
-//      int id = item.getItemId();
-//
-//      if(id == R.id.recherche) {
-//        return true;
-//      }
-//
-//      return super.onOptionsItemSelected(item);
-//  }
+        SearchView searchV = (SearchView) menuItem.getActionView();
+        searchV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+          @Override
+          public boolean onQueryTextSubmit(String s) {
+            return false;
+          }
+
+          @Override
+          public boolean onQueryTextChange(String s) {
+            adapter.getFilter().filter(s);
+            return true;
+          }
+      });
+
+      return true;
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+      int id = item.getItemId();
+
+      if(id == R.id.recherche) {
+        return true;
+      }
+
+      return super.onOptionsItemSelected(item);
+  }
 
 
     public void getFruitEtLegume() {
@@ -173,7 +175,7 @@ public class ListeAnimauxActivity extends BaseActivity {
         public void onResponse(Call<EntiteRep> call, Response<EntiteRep> response) {
           if(response.isSuccessful()) {
             listeEntite = response.body().getData();
-            EntiteAdapter adapter = new EntiteAdapter(ListeAnimauxActivity.this, (ArrayList<Entite>) listeEntite);
+            adapter = new EntiteAdapter(ListeAnimauxActivity.this, (ArrayList<Entite>) listeEntite);
             entiteGV.setAdapter(adapter);
           }
           else {

@@ -28,11 +28,11 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
 
-      ActionBar actionBar = getSupportActionBar();
-      actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-      actionBar.setCustomView(R.layout.actionbar);
-      TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
-      myTitleText.setText("Menu");
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.actionbar);
+        TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
+        myTitleText.setText("Menu");
 
         sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
 
