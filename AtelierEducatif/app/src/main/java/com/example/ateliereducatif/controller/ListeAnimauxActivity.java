@@ -40,7 +40,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class ListeAnimauxActivity extends BaseActivity {
+public class ListeAnimauxActivity extends BaseListActivity {
 
     GridView entiteGV;
     EntiteService entiteService;

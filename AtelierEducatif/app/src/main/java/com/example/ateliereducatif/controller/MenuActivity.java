@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import com.example.ateliereducatif.R;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends BaseActivity {
 
     public static final String SHARED_PREFS = "shared_prefs";
     Button boutonTerre, boutonRecitation, boutonAnimaux, boutonFruitEtLegume, boutonAlphabet, boutonTable;
@@ -31,6 +31,8 @@ public class MenuActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         actionBar.setCustomView(R.layout.actionbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setHomeButtonEnabled(false);
         TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
         myTitleText.setText("Menu");
 
@@ -100,20 +102,4 @@ public class MenuActivity extends AppCompatActivity {
         }
       });
     }
-
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-
-    switch (item.getItemId()) {
-      case R.id.menuButton:
-        Intent intent2 = new Intent(this, ConnexionActivity.class);
-        startActivity(intent2);
-        finish();
-        return true;
-      default:
-        return super.onOptionsItemSelected(item);
-
-    }
-  }
 }

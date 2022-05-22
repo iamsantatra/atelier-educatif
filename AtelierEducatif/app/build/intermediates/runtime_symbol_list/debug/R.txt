@@ -2805,6 +2805,7 @@ int id honorRequest 0x7f0a00e9
 int id horizontal_only 0x7f0a00ea
 int id icon 0x7f0a00eb
 int id icon_group 0x7f0a00ec
+int id idAlphabet 0x7f0a0225
 int id idAnimalNom 0x7f0a00ed
 int id idAnimauxImage 0x7f0a00ee
 int id idBoutonTable 0x7f0a00ef
@@ -3320,6 +3321,7 @@ int layout text_view_with_theme_line_height 0x7f0d0087
 int layout text_view_without_line_height 0x7f0d0088
 int menu example_menu 0x7f0e0000
 int menu example_menu2 0x7f0e0001
+int menu liste_menu 0x7f0e0003
 int menu main_menu 0x7f0e0002
 int mipmap ic_launcher 0x7f0f0000
 int mipmap ic_launcher_round 0x7f0f0001

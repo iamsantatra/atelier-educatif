@@ -50,6 +50,7 @@ id editMotDePasse
 id editNomUtilisateur
 id editText
 id fruitEtLegume
+id idAlphabet
 id idAnimalNom
 id idAnimauxImage
 id idBoutonTable
@@ -100,6 +101,7 @@ layout card_item
 layout detail_animal
 layout main_menu
 layout settings
+menu liste_menu
 menu main_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
