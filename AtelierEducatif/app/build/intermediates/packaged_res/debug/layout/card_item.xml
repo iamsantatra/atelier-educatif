@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--XML implementation of Card Layout-->
+<androidx.cardview.widget.CardView
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:foreground="?android:selectableItemBackground"
+  app:cardCornerRadius="6.0dip"
+  app:cardElevation="4.0dip"
+  app:cardUseCompatPadding="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+      android:id="@+id/idYoutube"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:adjustViewBounds="true"
+      android:maxHeight="150dp"
+      android:minHeight="100dp"
+      android:scaleType="centerCrop" />
+
+    <TextView
+      android:id="@+id/idTitre"
+      android:textSize="14.0sp"
+      android:textStyle="normal"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="left"
+      android:paddingLeft="5.0dip"
+      android:paddingTop="5.0dip"
+      android:paddingRight="5.0dip"
+      android:paddingBottom="5.0dip"
+      android:text="Hello"
+      android:textColor="@android:color/secondary_text_light"/>
+  </LinearLayout>
+
+</androidx.cardview.widget.CardView>
