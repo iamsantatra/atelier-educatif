@@ -156,10 +156,10 @@
                     "from": {
                         "startLines": "16,2",
                         "startColumns": "4,4",
-                        "startOffsets": "819,100",
+                        "startOffsets": "835,102",
                         "endLines": "21,14",
                         "endColumns": "12,12",
-                        "endOffsets": "1178,813"
+                        "endOffsets": "1199,827"
                     },
                     "to": {
                         "startLines": "5263,5699",

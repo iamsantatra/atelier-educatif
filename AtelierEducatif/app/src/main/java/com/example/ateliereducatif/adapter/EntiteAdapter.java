@@ -24,29 +24,27 @@ import com.squareup.picasso.Picasso;
 public class EntiteAdapter extends ArrayAdapter<Entite> implements Filterable {
 
   ArrayList<Entite> entiteArrayList;
-//  ArrayList<Entite> entiteArrayListFiltered;
+  ArrayList<Entite> entiteArrayListFiltered;
   Context context;
 
   public EntiteAdapter(@NonNull Context context, ArrayList<Entite> entiteArrayList) {
     super(context, 0, entiteArrayList);
     this.context = context;
     this.entiteArrayList = entiteArrayList;
-//    this.entiteArrayListFiltered = entiteArrayListFiltered;
+    this.entiteArrayListFiltered = entiteArrayList;
   }
 
   @NonNull
   @Override
   public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-
     if (convertView == null){
       LayoutInflater layoutInflater = (LayoutInflater)getContext().getSystemService(getContext().LAYOUT_INFLATER_SERVICE);
       convertView = layoutInflater.inflate(R.layout.card_animaux_item, null, true);
     }
-    Entite entiteModel = getItem(position);
     ImageView animauxImage = (ImageView) convertView.findViewById(R.id.idAnimauxImage);
     TextView animauxNom = (TextView) convertView.findViewById(R.id.idAnimalNom);
-    animauxNom.setText(entiteModel.getNom());
-    Picasso.with(context).load(entiteModel.getImage()).into(animauxImage);
+    animauxNom.setText(entiteArrayListFiltered.get(position).getNom());
+    Picasso.with(context).load(entiteArrayListFiltered.get(position).getImage()).into(animauxImage);
     return convertView;
   }
 
@@ -64,7 +62,7 @@ public class EntiteAdapter extends ArrayAdapter<Entite> implements Filterable {
           ArrayList<Entite> resultData = new ArrayList<>();
 
           for(Entite entite : entiteArrayList) {
-            if(entite.getNom().contains(recherche)) {
+            if(entite.getNom().toLowerCase().contains(recherche)) {
               resultData.add(entite);
             }
 
@@ -77,10 +75,26 @@ public class EntiteAdapter extends ArrayAdapter<Entite> implements Filterable {
 
       @Override
       protected void publishResults(CharSequence constraint, FilterResults results) {
-        entiteArrayList = (ArrayList<Entite>) results.values;
+        entiteArrayListFiltered = (ArrayList<Entite>) results.values;
         notifyDataSetChanged();
       }
     };
     return filter;
   }
+
+  @Override
+  public int getCount() {
+    return entiteArrayListFiltered.size();
+  }
+
+  @Override
+  public Entite getItem(int position) {
+    return null;
+  }
+
+  @Override
+  public long getItemId(int position) {
+    return position;
+  }
 }
+

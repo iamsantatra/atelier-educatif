@@ -55,12 +55,12 @@ public class ListeAnimauxActivity extends BaseListActivity {
         setContentView(R.layout.activity_liste_animaux);
 
         TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
-        myTitleText.setText("Animaux");
 
         Bundle extras= getIntent().getExtras();
         String click= extras.getString("click");
         entiteGV = findViewById(R.id.idListeAnimaux);
         if(click.compareTo("animaux")==0){
+          myTitleText.setText("Animaux");
           getAnimaux();
           entiteGV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -70,6 +70,7 @@ public class ListeAnimauxActivity extends BaseListActivity {
           });
         }
         if(click.compareTo("fruitEtLegume")==0){
+          myTitleText.setText("Fruit et légume");
           getFruitEtLegume();
         }
     }
@@ -133,9 +134,10 @@ public class ListeAnimauxActivity extends BaseListActivity {
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
-        MenuItem menuItem = menu.findItem(R.id.recherche);
-
+        getMenuInflater().inflate(R.menu.liste_menu, menu);
+        MenuItem menuItem = menu.findItem(R.id.idRecherche);
         SearchView searchV = (SearchView) menuItem.getActionView();
+        searchV.setMaxWidth(Integer.MAX_VALUE);
         searchV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
           @Override
           public boolean onQueryTextSubmit(String s) {
@@ -156,7 +158,7 @@ public class ListeAnimauxActivity extends BaseListActivity {
   public boolean onOptionsItemSelected(MenuItem item) {
       int id = item.getItemId();
 
-      if(id == R.id.recherche) {
+      if(id == R.id.idRecherche) {
         return true;
       }
 

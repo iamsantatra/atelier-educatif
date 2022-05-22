@@ -3,7 +3,10 @@ package com.example.ateliereducatif.controller;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -28,6 +31,7 @@ public class MenuActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
 
+        addNotification();
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         actionBar.setCustomView(R.layout.actionbar);
@@ -102,4 +106,21 @@ public class MenuActivity extends BaseActivity {
         }
       });
     }
+
+  private void addNotification() {
+    NotificationCompat.Builder builder =
+      new NotificationCompat.Builder(this)
+        .setSmallIcon(R.drawable.ic_boy)
+        .setContentTitle("Sauvons la planète Terre!")
+        .setContentText("Découvrez les gestes simples à adopter au quotidien");
+
+    Intent notificationIntent = new Intent(this, TerreActivity.class);
+    PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
+      PendingIntent.FLAG_UPDATE_CURRENT);
+    builder.setContentIntent(contentIntent);
+
+    // Add as notification
+    NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+    manager.notify(0, builder.build());
+  }
 }

@@ -55,6 +55,7 @@ id idAnimalNom
 id idAnimauxImage
 id idBoutonTable
 id idListeAnimaux
+id idRecherche
 id idTextTable
 id idTitre
 id idTitreYoutube
@@ -74,7 +75,6 @@ id nom_animal
 id notre_planete
 id prev
 id quiz
-id recherche
 id recitation
 id rltMenu
 id rltSound
