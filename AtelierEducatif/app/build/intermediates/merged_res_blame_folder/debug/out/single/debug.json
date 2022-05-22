@@ -1,0 +1,354 @@
+[
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_password.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_password.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_table.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\activity_table.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_search_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_search_24.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_liste_recitation.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\activity_liste_recitation.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_search_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_password.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-xhdpi\\ic_password.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_password.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_password.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_bg_main.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-mdpi\\bg_main.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_exit_to_app_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_exit_to_app_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_btn_prev_150.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-hdpi\\btn_prev_150.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_password.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-xxhdpi\\ic_password.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_search_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable_kids.jpg.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable\\kids.jpg"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_password.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_password.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_account.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-hdpi\\ic_account.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_splash.jpg.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-mdpi\\splash.jpg"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_menu_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_password.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-hdpi\\ic_password.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_terre.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\activity_terre.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_account.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-mdpi\\ic_account.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable_gradient.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable\\gradient.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_menu_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_search_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_btn_next_150.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-hdpi\\btn_next_150.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_menu_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable_splash_screen.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable\\splash_screen.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_main_menu.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\main_menu.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\font_sigmar_one_regular.ttf.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\font\\sigmar_one_regular.ttf"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\font_sassoon_sans_slopestd_medium.otf.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\font\\sassoon_sans_slopestd_medium.otf"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_exit_to_app_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_exit_to_app_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_menu_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_password.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-mdpi\\ic_password.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\anim_fromtop.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\anim\\fromtop.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_settings.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_settings.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\settings.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_exit_to_app_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_exit_to_app_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_menu_24.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_menu_24.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_search_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_account.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_account.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-xxhdpi\\ic_account.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\menu_main_menu.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_search_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable_dauphin.jpeg.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable\\dauphin.jpeg"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_connexion.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\activity_connexion.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_card_item.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\card_item.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_boy.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-mdpi\\ic_boy.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_exit_to_app_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_exit_to_app_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_account.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-xhdpi\\ic_account.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_card_animaux_item.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\card_animaux_item.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_actionbar.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\actionbar.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_exit_to_app_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_exit_to_app_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_liste_animaux.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\activity_liste_animaux.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\raw_uplifting_africa.mp3.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\raw\\uplifting_africa.mp3"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_exit_to_app_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_exit_to_app_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_account.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_account.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\menu_liste_menu.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\menu\\liste_menu.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_menu_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\font_aclonica.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\font\\aclonica.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_detail_animal.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\detail_animal.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_account.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_account.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_menu_24.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_alphabet.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\activity_alphabet.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_btn_back_150.png.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable-xxhdpi\\btn_back_150.png"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_recitation.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\layout\\activity_recitation.xml"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable_alphabet_img.jpg.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\src\\main\\res\\drawable\\alphabet_img.jpg"
+    },
+    {
+        "merged": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_exit_to_app_24.xml.flat",
+        "source": "F:\\ITU\\Master\\M1\\S7\\mobile\\projet\\atelier\\AtelierEducatif\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_exit_to_app_24.xml"
+    }
+]
