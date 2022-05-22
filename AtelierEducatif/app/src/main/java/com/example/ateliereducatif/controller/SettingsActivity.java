@@ -3,6 +3,8 @@ package com.example.ateliereducatif.controller;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.ateliereducatif.R;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +12,8 @@ import android.widget.TextView;
 
 public class SettingsActivity extends BaseActivity {
 
+
+  Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,5 +25,17 @@ public class SettingsActivity extends BaseActivity {
     public void conditionGenerale(View view)
     {
       Log.d("test", "test");
+    }
+
+    public void politique(View view) {
+      intent = new Intent(this, PrivacyActivity.class);
+      startActivity(intent);
+//      Log.d("politique", "politique");
+    }
+
+    public void deconnexion(View view) {
+      intent = new Intent(this, ConnexionActivity.class);
+      startActivity(intent);
+  //      Log.d("politique", "politique");
     }
 }

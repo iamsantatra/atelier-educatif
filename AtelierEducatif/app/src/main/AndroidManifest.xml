@@ -21,6 +21,9 @@
       android:name=".controller.TableActivity"
       android:exported="false" />
     <activity
+      android:name=".controller.PrivacyActivity"
+      android:exported="false" />
+    <activity
       android:name=".controller.AlphabetActivity"
       android:exported="false" />
     <activity

@@ -40,7 +40,7 @@ public class ConnexionActivity extends AppCompatActivity {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     UtilisateurService uService;
 
-    SharedPreferences sharedpreferences;
+    // SharedPreferences sharedpreferences;
 
     // creating constant keys for shared preferences.
     public static final String SHARED_PREFS = "shared_prefs";
@@ -117,18 +117,13 @@ public class ConnexionActivity extends AppCompatActivity {
             public void onResponse(Call<UtilisateurRep> call, Response<UtilisateurRep> response) {
                 if(response.isSuccessful()) {
                     UtilisateurRep resultat = response.body();
-//                  Utilisateur user = (Utilisateur) resultat.getData();
-                    Utilisateur user = (Utilisateur) response.body().getUtilisateur();
-//                    System.out.println(user.getNom());
-//                    Utilisateur user = (Utilisateur) objectUser;
-////                    Toast.makeText(ConnexionActivity.this,  user.getNom(), Toast.LENGTH_SHORT).show();
-                    sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences.edit();
-                    editor.putString("NOM_KEY", user.getNom());
-                    editor.putString("NOM_UTILISATEUR_KEY", user.getNomUtilisateur());
-                    editor.putString("TOKEN_KEY", resultat.getToken());
+                    Utilisateur user = response.body().getUtilisateur();
+//                    sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+//                    SharedPreferences.Editor editor = sharedpreferences.edit();
+//                    editor.putString("NOM_KEY", user.getNom());
+//                    editor.putString("NOM_UTILISATEUR_KEY", user.getNomUtilisateur());
+//                    editor.putString("TOKEN_KEY", resultat.getToken());
 
-//                    editor.apply();
                     Intent intent = new Intent(ConnexionActivity.this, MenuActivity.class);
 
                     startActivity(intent);
