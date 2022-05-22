@@ -35,6 +35,22 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/gray"/>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_cell_height"
+        android:text="Politique de confidentialité"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:onClick="politique"
+        android:layout_marginLeft="@dimen/menu_cell_margin_left"/>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
       <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/menu_cell_height"
