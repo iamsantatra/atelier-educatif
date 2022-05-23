@@ -46,6 +46,16 @@ db.terres.findOneAndUpdate(
 	},
 	{
 		$set: {
+				'image': 'https://res.cloudinary.com/dyptj60q1/image/upload/v1652355353/Images/dechet_fpdsge.jpg'
+			}
+	})
+
+db.terres.findOneAndUpdate(
+	{
+		'titre':'Trier les jouets pour prendre conscience de la valeur des choses'
+	},
+	{
+		$set: {
 				'image': 'https://res.cloudinary.com/dyptj60q1/image/upload/v1652355353/Images/jouet_x1lgok.jpg'
 			}
 	})

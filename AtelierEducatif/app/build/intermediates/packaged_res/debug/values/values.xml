@@ -15,16 +15,16 @@
         </item>
     </string-array>
     <string-array name="nombre">
-      <item>1</item>
-      <item>2</item>
-      <item>3</item>
-      <item>4</item>
-      <item>5</item>
-      <item>6</item>
-      <item>7</item>
-      <item>8</item>
-      <item>9</item>
-      <item>10</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
     </string-array>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/aclonica</item>
@@ -38,21 +38,23 @@
     <color name="tranparent">#00FFFFFF</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#feee5d</color>
+    <color name="yellowClaire">#FDEF6F</color>
     <dimen name="cell_height">180dp</dimen>
     <dimen name="header_top_padding">30dp</dimen>
     <dimen name="menu_cell_height">65dp</dimen>
     <dimen name="menu_cell_margin_left">16dp</dimen>
     <string name="app_name">Kilonga</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <style name="SplashScreenTheme" parent="Theme.AppCompat.NoActionBar">
       <item name="colorPrimary">@color/yellow</item>
-      <item name="colorPrimaryVariant">@color/yellow</item>
+      <item name="colorPrimaryVariant">@color/tranparent</item>
       <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
       <item name="android:windowBackground">@drawable/splash</item>
     </style>
     <style name="Theme.AtelierEducatif" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/yellow</item>
-        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/yellowClaire</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/green</item>

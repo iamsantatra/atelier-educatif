@@ -7,46 +7,17 @@
     tools:context=".controller.ConnexionActivity">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_centerInParent="true">
-
-        <EditText
-            android:id="@+id/editNomUtilisateur"
-            android:layout_width="match_parent"
-            android:inputType="text"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:hint="Nom d'utilisateur"
-            android:drawableRight="@drawable/ic_account"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Mot de passe"
-            android:id="@+id/editMotDePasse"
-            android:layout_marginBottom="55dp"
-            android:inputType="textPassword"
-            android:drawableRight="@drawable/ic_password"
-            />
-
-        <Button
-          android:id="@+id/boutonConnexion"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:text="Se connecter"
-          android:textColor="@color/white"
-          android:height="50px"
-          android:textSize="18sp"
-          app:backgroundTint="#FFEB3B"
-          app:iconTint="#070707" />
-
-    </LinearLayout>
-
+  <fragment
+    android:id="@+id/fragmentContainerView"
+    android:name="com.example.ateliereducatif.fragment.ConnexionFragment"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_centerInParent="true"
+    android:layout_marginStart="9dp"
+    android:layout_marginTop="-11dp"
+    android:layout_marginEnd="4dp"
+    tools:layout="@layout/fragment_connexion" />
 </RelativeLayout>

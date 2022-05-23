@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  tools:context=".fragment.ConnexionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="16dp"
+    android:gravity="center_vertical"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="306dp"
+    android:orientation="vertical">
+
+    <EditText
+      android:id="@+id/editNomUtilisateur"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="30dp"
+      android:drawableRight="@drawable/ic_account"
+      android:hint="Nom d'utilisateur"
+      android:inputType="text" />
+
+    <EditText
+      android:id="@+id/editMotDePasse"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="55dp"
+      android:drawableRight="@drawable/ic_password"
+      android:hint="Mot de passe"
+      android:inputType="textPassword" />
+
+    <Button
+      android:id="@+id/boutonConnexion"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:height="58dp"
+      android:text="Se connecter"
+      android:textAllCaps="false"
+      android:textColor="@color/green"
+      android:textSize="18sp"
+      app:backgroundTint="#FFEB3B"
+      app:cornerRadius="18dp"
+      app:iconTint="#070707" />
+
+  </LinearLayout>
+
+</RelativeLayout>

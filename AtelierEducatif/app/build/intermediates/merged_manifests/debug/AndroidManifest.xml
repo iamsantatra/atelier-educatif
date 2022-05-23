@@ -29,7 +29,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.AtelierEducatif" >
         <activity
+            android:name="com.example.ateliereducatif.controller.MathActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.ateliereducatif.controller.TableActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ateliereducatif.controller.PrivacyActivity"
             android:exported="false" />
         <activity
             android:name="com.example.ateliereducatif.controller.AlphabetActivity"

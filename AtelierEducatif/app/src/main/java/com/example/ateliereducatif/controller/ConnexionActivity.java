@@ -124,7 +124,7 @@ public class ConnexionActivity extends AppCompatActivity {
 //                    editor.putString("NOM_UTILISATEUR_KEY", user.getNomUtilisateur());
 //                    editor.putString("TOKEN_KEY", resultat.getToken());
 
-                    Intent intent = new Intent(ConnexionActivity.this, MenuActivity.class);
+                    Intent intent = new Intent(ConnexionActivity.this, MenuActivity.class).putExtra("name", "connexion");
 
                     startActivity(intent);
                     finish();

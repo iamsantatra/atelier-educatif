@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,7 @@ import org.json.JSONObject;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,12 +41,12 @@ import retrofit2.Retrofit;
 
 public class TerreActivity extends BaseActivity {
 
-    ImageButton boutonNext, boutonPrev;
+    ImageButton boutonNext, boutonPrev, voice;
     TextView textTitre, textDescription;
     ImageView imageTerre;
     List<Terre> listeTerre;
     TerreService tService;
-
+    TextToSpeech t1;
     int increment = 0;
 
   @Override
@@ -55,7 +57,10 @@ public class TerreActivity extends BaseActivity {
         TextView myTitleText = (TextView) findViewById(R.id.action_bar_title);
         myTitleText.setText("Notre planète");
 
+        voice = findViewById(R.id.voice);
+
         getTerre();
+        setTextToSpeech();
     }
 
     public void getTerre() {
@@ -83,9 +88,20 @@ public class TerreActivity extends BaseActivity {
             textTitre.setText(t.getTitre());
             textDescription.setText(t.getDescription());
             Picasso.with(getApplicationContext()).load(t.getImage()).into(imageTerre);
+
+
+
+            voice.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                t1.speak(listeTerre.get(increment).getTitre()+". "+listeTerre.get(increment).getDescription(), TextToSpeech.QUEUE_FLUSH, null);
+              }
+            });
             boutonNext.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View view) {
+//                onPause();
+                t1.stop();
                 if(increment<response.body().getTotalPages()) {
                   boutonPrev.setVisibility(View.VISIBLE);
                   increment++;
@@ -102,6 +118,8 @@ public class TerreActivity extends BaseActivity {
             boutonPrev.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View view) {
+//                onPause();
+                t1.stop();
                 if(increment>0) {
                   boutonNext.setVisibility(View.VISIBLE);
                   increment--;
@@ -132,4 +150,24 @@ public class TerreActivity extends BaseActivity {
         }
       });
     }
+
+  @Override
+  public void onPause() {
+    if (t1 != null) {
+      t1.stop();
+      t1.shutdown();
+    }
+    super.onPause();
+  }
+
+  public void setTextToSpeech() {
+    t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+      @Override
+      public void onInit(int status) {
+        if(status != TextToSpeech.ERROR) {
+          t1.setLanguage(Locale.FRANCE);
+        }
+      }
+    });
+  }
 }

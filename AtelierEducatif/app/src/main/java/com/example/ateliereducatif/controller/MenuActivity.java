@@ -19,11 +19,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ateliereducatif.R;
+import com.example.ateliereducatif.fragment.MathFragment;
 
 public class MenuActivity extends BaseActivity {
 
     public static final String SHARED_PREFS = "shared_prefs";
-    Button boutonTerre, boutonRecitation, boutonAnimaux, boutonFruitEtLegume, boutonAlphabet, boutonTable;
+    Button boutonTerre, boutonRecitation, boutonAnimaux, boutonFruitEtLegume, boutonAlphabet, boutonTable, boutonQuiz;
 
     SharedPreferences sharedpreferences;
     @Override
@@ -31,7 +32,10 @@ public class MenuActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
 
-        addNotification();
+        if(getIntent().getExtras() != null) {
+          addNotification();
+        }
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         actionBar.setCustomView(R.layout.actionbar);
@@ -101,6 +105,16 @@ public class MenuActivity extends BaseActivity {
         @Override
         public void onClick(View view) {
           Intent intent = new Intent(MenuActivity.this, TableActivity.class);
+          startActivity(intent);
+          finish();
+        }
+      });
+
+      boutonQuiz = (Button) findViewById(R.id.quiz);
+      boutonQuiz.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+          Intent intent = new Intent(getApplicationContext(), MathActivity.class);
           startActivity(intent);
           finish();
         }

@@ -2,7 +2,7 @@
 <resources xmlns:ns1="http://schemas.android.com/tools">
     <style name="SplashScreenTheme" parent="Theme.AppCompat.NoActionBar">
     <item name="colorPrimary">@color/yellow</item>
-    <item name="colorPrimaryVariant">@color/yellow</item>
+    <item name="colorPrimaryVariant">@color/tranparent</item>
     <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
     <item name="android:windowBackground">@drawable/splash</item>
   </style>
